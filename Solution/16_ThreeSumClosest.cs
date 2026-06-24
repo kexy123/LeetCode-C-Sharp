@@ -24,7 +24,7 @@ public partial class Solution
         // Sort the array so that the lowest
         // elements are on the left and the
         // highest elements are on the right.
-        Array.Sort(nums);
+        nums.Sort();
 
         int closestSum = 0;
         int closestDifference = int.MaxValue;
