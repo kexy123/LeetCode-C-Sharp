@@ -8,13 +8,20 @@
 
 /// <summary>
 /// Simplified definition of <see cref="ListNode"/>
-/// in Add Two Numbers. Stores a base-10 digit and
-/// a pointer to another <see cref="ListNode"/>.
+/// in Add Two Numbers and other questions. Stores
+/// a base-10 digit and a pointer to another
+/// <see cref="ListNode"/>.
 /// </summary>
 public class ListNode(int val = 0, ListNode? next = null)
 {
+    /// <summary>
+    /// The <see cref="int"/> value of <see cref="this"/>.
+    /// </summary>
     public int val = val;
 
+    /// <summary>
+    /// The next <see cref="ListNode"/> to point to.
+    /// </summary>
     public ListNode next = next!;
 }
 
