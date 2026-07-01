@@ -58,7 +58,7 @@ public partial class Solution
                 // the array.
                 foreach (char c in letters)
                 {
-                    extended.Add($"{c}");
+                    extended.Add(c.ToString());
                 }
             }
             else

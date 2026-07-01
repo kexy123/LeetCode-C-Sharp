@@ -32,7 +32,7 @@ public partial class Solution
 
         // There is no explicit type to convert
         // char to string; use string interpolation.
-        string result = $"{s[0]}";
+        string result = s[0].ToString();
 
         // Because we are checking for the longest
         // palindromic substring, we can end the loop
