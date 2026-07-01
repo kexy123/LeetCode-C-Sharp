@@ -26,8 +26,8 @@ public partial class Solution
         // there are 27 distinct groups to
         // track. Here are their locations in
         // the array:
-        //      0..8 -> the columns.
-        //      9..17 -> the rows.
+        //      0..8   -> the columns.
+        //      9..17  -> the rows.
         //      18..26 -> the 3x3 regions.
         HashSet<char>[] distinctGroups = new HashSet<char>[27];
         for (int i = 0; i < 27; i++)
