@@ -6,10 +6,10 @@
 //      Runtime:    3 ms
 //      Memory:     45.95 MB
 //
-// Is StringBuilder too inefficient when,
-// coming to time? Fastest solution used
-// StringBuilder, although my implementation
-// made the method slower.
+// Is StringBuilder too inefficient in terms of
+// time? Fastest solution used StringBuilder,
+// although my implementation made the method
+// slower.
 
 public partial class Solution
 {
