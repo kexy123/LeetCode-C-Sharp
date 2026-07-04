@@ -12,6 +12,8 @@
 // the next permutation:
 // https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

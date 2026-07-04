@@ -6,6 +6,8 @@
 //      Runtime:    0 ms
 //      Memory:     39.97 MB
 
+namespace Solution;
+
 public partial class Solution
 {
     public int StrStr(string haystack, string needle)

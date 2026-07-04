@@ -10,6 +10,8 @@
 // a stack-based approach because of time
 // limit issues.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

@@ -12,6 +12,8 @@
 // Sudoku solver beats 97% of people who have
 // submitted their answer to this problem.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

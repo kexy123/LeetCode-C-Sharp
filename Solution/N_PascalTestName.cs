@@ -6,6 +6,8 @@
 //      Runtime:    X ms
 //      Memory:     XX.XX MB
 
+namespace Solution;
+
 public partial class Solution
 {
     // Insert method here.

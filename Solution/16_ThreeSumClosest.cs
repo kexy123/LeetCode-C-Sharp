@@ -10,6 +10,8 @@
 // whose sum adds to target or is closest to target
 // is conjectured to be at least O(n^2).
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

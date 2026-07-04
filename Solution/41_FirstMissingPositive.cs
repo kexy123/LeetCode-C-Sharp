@@ -10,6 +10,8 @@
 // to the thinking process, and one of the
 // solutions in the LeetCode problem.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

@@ -12,6 +12,8 @@
 // Check compiled results for inline vs.
 // no inlining.
 
+namespace Solution;
+
 public partial class Solution
 {
     public ListNode? ReverseKGroup(ListNode head, int k)
@@ -33,7 +35,7 @@ public partial class Solution
 
         return top.next;
 
-        
+
         // Reverses the next k ListNodes if
         // possible.
         void Reverse()

@@ -9,6 +9,8 @@
 // TODO: Make this code more efficient
 // using bitwise operations.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

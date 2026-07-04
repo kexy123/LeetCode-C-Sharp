@@ -11,6 +11,8 @@
 // The fastest solution seems to use a dual
 // pointer approach.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

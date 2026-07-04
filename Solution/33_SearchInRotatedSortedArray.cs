@@ -9,6 +9,8 @@
 // Looked at a few discussion posts since
 // I got stuck.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

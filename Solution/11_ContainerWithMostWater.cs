@@ -15,6 +15,8 @@
 // the effort to prove that it will always
 // return the maximum rectangle.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

@@ -11,6 +11,8 @@
 // although my implementation made the method
 // slower.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>
@@ -66,13 +68,13 @@ public partial class Solution
             roman += count switch
             {
                 // Special case for decrement from mul10 i.e. "IX".
-                9 =>             $"{primary}{mul10}",
+                9 => $"{primary}{mul10}",
                 // Special case for decrement from mul5 i.e. "IV".
-                4 =>             $"{primary}{mul5}",
+                4 => $"{primary}{mul5}",
                 // Appending mul5 and how many are left i.e. "VIII".
                 <= 8 and >= 5 => $"{mul5}{new string(primary, count - 5)}",
                 // Appending the primary character i.e. "III".
-                _ =>             new string(primary, count),
+                _ => new string(primary, count),
             };
         }
     }

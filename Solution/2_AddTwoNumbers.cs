@@ -6,6 +6,8 @@
 //      Runtime:    1 ms
 //      Memory:     53.55 MB
 
+namespace Solution;
+
 /// <summary>
 /// Simplified definition of <see cref="ListNode"/>
 /// in Add Two Numbers and other questions. Stores

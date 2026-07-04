@@ -6,6 +6,8 @@
 //      Runtime:    1 ms
 //      Memory:     49.20 MB
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>
@@ -78,7 +80,7 @@ public partial class Solution
                 'X' => 10,
                 'V' => 5,
                 'I' => 1,
-                _ =>   throw new NotImplementedException($"Did not implement Roman numeral '{c}'"),
+                _ => throw new NotImplementedException($"Did not implement Roman numeral '{c}'"),
             };
         }
     }

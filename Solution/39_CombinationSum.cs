@@ -6,6 +6,8 @@
 //      Runtime:    11 ms
 //      Memory:     49.64 MB
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

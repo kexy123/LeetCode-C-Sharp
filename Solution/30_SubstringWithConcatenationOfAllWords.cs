@@ -13,6 +13,8 @@
 // (26 June 2026) causes a time limit exceeded
 // error for case #182.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>
@@ -93,7 +95,7 @@ public partial class Solution
 
 // TO RESUBMIT:
 
-//public partial class Solution
+//namespace Solution; public partial class Solution
 //{
 //    /// <summary>
 //    /// Locates all starting indices in the <see cref="string"/>

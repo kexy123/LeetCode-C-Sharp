@@ -8,6 +8,8 @@
 
 using System.Text;
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

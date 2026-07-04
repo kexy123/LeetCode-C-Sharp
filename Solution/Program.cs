@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿namespace Solution;
+
+internal class Program
 {
     public static void Main(string[] args)
     {

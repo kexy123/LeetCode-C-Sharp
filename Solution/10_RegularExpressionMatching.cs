@@ -11,6 +11,8 @@
 // was a recursive search call instead of
 // a stack. Might rewrite later.
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>

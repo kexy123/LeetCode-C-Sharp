@@ -13,6 +13,8 @@
 
 using System.Text;
 
+namespace Solution;
+
 public partial class Solution
 {
     /// <summary>
@@ -69,7 +71,7 @@ public partial class Solution
             {
                 current[startingPoint++] = ')';
             }
-            
+
             results.Add(current.ToString());
         }
 
