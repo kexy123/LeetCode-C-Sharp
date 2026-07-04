@@ -18,8 +18,8 @@ public partial class Solution
     /// solution, and the same element cannot be
     /// used twice.
     /// </remarks>
-    /// <param name="args">An array of integers to search for the two sum.</param>
-    /// <param name="target">The target sum to find.</param>
+    /// <param name="args">An <see cref="int"/> array to search for the two sum.</param>
+    /// <param name="target">The target <see cref="int"/> sum to find.</param>
     /// <returns>A two-integer array containing the indices of the two numbers that add up to <see cref="target"/>.</returns>
     public int[] TwoSum(int[] args, int target)
     {

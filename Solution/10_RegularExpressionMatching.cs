@@ -6,7 +6,7 @@
 //      Runtime:    329 ms
 //      Memory:     58.87 MB
 //
-// Was very difficult for me to gauge and
+// TODO: Was very difficult for me to gauge and
 // figure out patterns. Fastest solution
 // was a recursive search call instead of
 // a stack. Might rewrite later.
@@ -19,7 +19,7 @@ public partial class Solution
     /// <paramref name="s"/>. The wildcard <c>.</c>
     /// captures any single letter, and the
     /// quantifier <c>*</c> suffixing a
-    /// character/wildcard captures a many of that
+    /// character/wildcard captures many of that
     /// character as possible. If that quantifier
     /// can't capture any characters, it is ignored.
     /// </summary>
