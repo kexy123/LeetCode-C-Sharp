@@ -35,6 +35,7 @@ public partial class Solution
         for (int i = 0; i < matrixHeight * matrixWidth; i++)
         {
             spiral[i] = matrix[y][x];
+
             switch (direction)
             {
                 // Spiral is moving right.
