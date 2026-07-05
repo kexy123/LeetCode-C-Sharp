@@ -51,9 +51,9 @@ public partial class Solution
             // furthest from all the
             // numbers of the current
             // range that i can go to.
-            int furthestEndpoint = 0;
+            int furthestEndpoint = i + nums[i];
             int furthestIndex = i;
-            for (int j = i + nums[i]; j > i; j--)
+            for (int j = furthestEndpoint; j > i; j--)
             {
                 int endpoint = j + nums[j];
                 if (endpoint > furthestEndpoint)
