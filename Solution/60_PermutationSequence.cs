@@ -24,7 +24,7 @@ public partial class Solution
     /// <param name="n">The number of elements.</param>
     /// <param name="k">The permutation to get.</param>
     /// <returns>The permutation concatenated as a string of digits.</returns>
-    public string GetPermutation(int n,int k)
+    public string GetPermutation(int n, int k)
     {
         // Permutations are 0-indexed in
         // this algorithm.

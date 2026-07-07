@@ -58,7 +58,7 @@ public partial class Solution
             powerOfSquare <<= 1;
         }
 
-        if (powerOfSquare>=0)
+        if (powerOfSquare >= 0)
         {
             // Doubling -2^31 will underflow
             // to 0, so remain under that
@@ -78,9 +78,9 @@ public partial class Solution
         // by result to finally make
         // it x^|n|.
         int complement = n - powerOfSquare;
-        while (complement<0)
+        while (complement < 0)
         {
-            while (powerOfSquare<complement)
+            while (powerOfSquare < complement)
             {
                 squaredBase = squares.Pop();
                 powerOfSquare >>= 1;

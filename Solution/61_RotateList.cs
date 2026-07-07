@@ -18,7 +18,7 @@ public partial class Solution
     /// <param name="head">The starting <see cref="ListNode"/>.</param>
     /// <param name="k">How many times to right-rotate.</param>
     /// <returns>The starting <see cref="ListNode"/>.</returns>
-    public ListNode? RotateRight(ListNode? head,int k)
+    public ListNode? RotateRight(ListNode? head, int k)
     {
         if (head is null)
         {
@@ -43,7 +43,7 @@ public partial class Solution
 
         root = head;
         int complement = numNodes - (k % numNodes);
-        if (complement==numNodes)
+        if (complement == numNodes)
         {
             // k enforces zero right rotation,
             // so return as is.
