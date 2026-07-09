@@ -31,7 +31,7 @@ public partial class Solution
         int left = 0, right = width * height - 1;
         while (right >= left)
         {
-            int midpoint = left + ((right - left) >> 1);
+            int midpoint = left + (right - left >> 1);
 
             // The row is midpoint / width, while the
             // column is midpoint % width.
