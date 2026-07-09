@@ -95,7 +95,7 @@ public partial class Solution
 
 // TO RESUBMIT:
 
-//namespace Solution; public partial class Solution
+//public partial class Solution
 //{
 //    /// <summary>
 //    /// Locates all starting indices in the <see cref="string"/>

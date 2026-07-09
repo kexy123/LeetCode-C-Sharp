@@ -68,7 +68,7 @@ public partial class Solution
             // overflow), and check if it is
             // greater than, equal to, or less
             // than x.
-            int midpoint = left + ((right - left) >> 1);
+            int midpoint = left + (right - left >> 1);
             long difference = x - (long)midpoint * midpoint;
 
             switch (difference)

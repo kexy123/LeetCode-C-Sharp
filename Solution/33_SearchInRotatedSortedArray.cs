@@ -16,7 +16,7 @@ public partial class Solution
     /// <summary>
     /// Uses a binary search algorithm to search
     /// for <paramref name="target"/> through a
-    /// sorted <see cref="int"/> array
+    /// sorted distinct <see cref="int"/> array
     /// <paramref name="nums"/> that is/is not
     /// left-rotated by an arbitrary amount.
     /// </summary>

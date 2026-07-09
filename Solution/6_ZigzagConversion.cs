@@ -56,7 +56,7 @@ public partial class Solution
 
         for (int row = 1; row < numRows - 1; row++)
         {
-            int zigzagNext = ((numRows - row) << 1) - 2;
+            int zigzagNext = (numRows - row << 1) - 2;
 
             // Extension of ZigzagLastRow(int) for
             // two characters in each segment.
@@ -76,6 +76,7 @@ public partial class Solution
         ZigzagLastRow(numRows - 1); // Last row.
 
         return result.ToString();
+
 
         // Adjoin the single characters in the
         // top or bottom row of each segment.
