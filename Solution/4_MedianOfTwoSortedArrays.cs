@@ -1,4 +1,4 @@
-﻿// RESULTS:
+// RESULTS:
 //      Submitted on 21 June 2026 at 23:49
 //
 //      2098 / 2098 testcases passed.
@@ -29,8 +29,8 @@ public partial class Solution
         // evenMedian is the element directly before oddMedian.
         int evenMedian = 0, oddMedian = 0;
 
-        // This is nested if-statements, but is a
-        // simple way to .
+        // These are nested if-statements, but this is for
+        // simplification.
         int i1 = 0, i2 = 0;
         for (int i = 0; i < size / 2 + 1; i++)
         {
