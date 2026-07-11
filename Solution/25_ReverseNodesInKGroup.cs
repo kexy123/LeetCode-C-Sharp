@@ -1,4 +1,4 @@
-﻿// RESULTS:
+// RESULTS:
 //      Submitted on 25 June 2026 at 21:45
 //
 //      62 / 62 testcases passed.
@@ -74,14 +74,14 @@ public partial class Solution
                 // (1) temp.next = old;
                 //
                 //           O    T
-                //      R -> 0 <- 1    2 -> 3 -> 4 -> 5
+                //      R -> 0 <> 1    2 -> 3 -> 4 -> 5
                 //
                 // Note that temp.next refers to as it was
                 // previously.
                 // (2) old = temp; temp = temp.next;
                 //
                 //                O    T
-                //      R -> 0 <- 1    2 -> 3 -> 4 -> 5
+                //      R -> 0 <> 1    2 -> 3 -> 4 -> 5
 
                 (temp.next, old, temp) = (old, temp, temp.next);
             }
@@ -89,7 +89,7 @@ public partial class Solution
             // Visual example:
             //
             //                O    T
-            //      R -> 0 -> 1    2 -> 3 -> 4 -> 5
+            //      R -> 0 <> 1    2 -> 3 -> 4 -> 5
             //
             // (1) root.next.next = temp;
             //
