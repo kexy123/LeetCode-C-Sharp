@@ -23,7 +23,7 @@ public partial class Solution
     /// element it is on.
     /// </summary>
     /// <param name="nums">The <see cref="int"/> array to check.</param>
-    /// <returns><see langword="true"/> if it can reach the end, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if it can reach the end; otherwise <see langword="false"/>.</returns>
     public bool CanJump(int[] nums)
     {
         int endTarget = nums.Length - 1;

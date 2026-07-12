@@ -18,7 +18,7 @@ public partial class Solution
     /// cells are marked with <c>'.'</c>.
     /// </summary>
     /// <param name="board">The 9x9 <see cref="char"/> double array to inspect.</param>
-    /// <returns><see langword="true"/> if the board is valid with the current cells, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the board is valid with the current cells; otherwise <see langword="false"/>.</returns>
     public bool IsValidSudoku(char[][] board)
     {
         // In a 9x9 Sudoku grid, there are

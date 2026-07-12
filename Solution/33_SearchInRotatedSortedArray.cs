@@ -22,7 +22,7 @@ public partial class Solution
     /// </summary>
     /// <param name="nums">The distinct sorted but left-rotated <see cref="int"/> array.</param>
     /// <param name="target">The target <see cref="int"/> to search for.</param>
-    /// <returns>The index of where the captured element is, otherwise <c>-1</c> if not.</returns>
+    /// <returns>The index of where the captured element is; otherwise <c>-1</c> if not.</returns>
     public int Search(int[] nums, int target)
     {
         // Binary search algorithm.

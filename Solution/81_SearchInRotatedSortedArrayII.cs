@@ -26,7 +26,7 @@ public partial class Solution
     /// </summary>
     /// <param name="nums">The <see cref="int"/> array to search through.</param>
     /// <param name="target">The target <see cref="int"/> to find.</param>
-    /// <returns><see langword="true"/> if it does exist in <paramref name="nums"/>, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if it does exist in <paramref name="nums"/>; otherwise <see langword="false"/>.</returns>
     public bool Search(int[] nums, int target)
     {
         int left = 0, right = nums.Length - 1;

@@ -21,7 +21,7 @@ public partial class Solution
     /// <param name="s1">The first <see cref="string"/>.</param>
     /// <param name="s2">The second <see cref="string"/>.</param>
     /// <param name="s3">The <see cref="string"/> to check if it interleaves with <paramref name="s1"/> and <paramref name="s2"/>.</param>
-    /// <returns><see langword="true"/> if <paramref name="s3"/> interleaves with <paramref name="s1"/> and <paramref name="s2"/>, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if <paramref name="s3"/> interleaves with <paramref name="s1"/> and <paramref name="s2"/>; otherwise <see langword="false"/>.</returns>
     public bool IsInterleave(string s1, string s2, string s3)
     {
         if (s1.Length + s2.Length != s3.Length)

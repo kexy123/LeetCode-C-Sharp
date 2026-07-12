@@ -35,7 +35,7 @@ public partial class Solution
     /// </summary>
     /// <param name="s1">The first <see cref="string"/>.</param>
     /// <param name="s2">The second <see cref="string"/>.</param>
-    /// <returns><see langword="true"/> if they are equal scrambles to each other, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if they are equal scrambles to each other; otherwise <see langword="false"/>.</returns>
     public bool IsScramble(string s1, string s2)
     {
         // Keep track of the starting index of s1, s2,

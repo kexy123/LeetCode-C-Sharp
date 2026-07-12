@@ -24,7 +24,7 @@ public partial class Solution
     /// </summary>
     /// <param name="s">The <see cref="string"/> to go through.</param>
     /// <param name="p">The <see cref="string"/> pattern.</param>
-    /// <returns><see langword="true"/> if the pattern <paramref name="p"/> matched, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the pattern <paramref name="p"/> matched; otherwise <see langword="false"/>.</returns>
     public bool IsMatch(string s, string p)
     {
         HashSet<(int iS, int iP)> invalidMatches = [];

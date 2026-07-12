@@ -19,7 +19,7 @@ public partial class Solution
     /// </summary>
     /// <param name="matrix">The <see cref="int"/> matrix to search through.</param>
     /// <param name="target">The item.</param>
-    /// <returns><see langword="true"/> if <paramref name="target"/> exists in <paramref name="matrix"/>, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if <paramref name="target"/> exists in <paramref name="matrix"/>; otherwise <see langword="false"/>.</returns>
     public bool SearchMatrix(int[][] matrix, int target)
     {
         int width = matrix[0].Length;

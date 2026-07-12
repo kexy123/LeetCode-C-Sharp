@@ -17,7 +17,7 @@ public partial class Solution
     /// are malformed or not.
     /// </summary>
     /// <param name="s">The <see cref="string"/> to inspect.</param>
-    /// <returns><see langword="true"/> if the brackets are not malformed, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the brackets are not malformed; otherwise <see langword="false"/>.</returns>
     public bool IsValid(string s)
     {
         Stack<char> parentheses = [];

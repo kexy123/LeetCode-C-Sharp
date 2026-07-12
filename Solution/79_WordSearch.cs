@@ -20,7 +20,7 @@ public partial class Solution
     /// </summary>
     /// <param name="board">The <see cref="char"/> matrix array to search in.</param>
     /// <param name="word">The <see cref="string"/> to search for.</param>
-    /// <returns><see langword="true"/> if it exists in <paramref name="board"/>, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if it exists in <paramref name="board"/>; otherwise <see langword="false"/>.</returns>
     public bool Exist(char[][] board, string word)
     {
         int width = board[0].Length;

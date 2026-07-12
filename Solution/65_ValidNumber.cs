@@ -27,7 +27,7 @@ public partial class Solution
     /// followed by digits.
     /// </summary>
     /// <param name="s">The <see cref="string"/> to inspect.</param>
-    /// <returns><see langword="true"/> if <paramref name="s"/> is a valid number, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if <paramref name="s"/> is a valid number; otherwise <see langword="false"/>.</returns>
     public bool IsNumber(string s)
     {
         bool canPrefixSign = true;

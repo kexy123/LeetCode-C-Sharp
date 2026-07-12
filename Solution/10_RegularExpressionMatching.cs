@@ -27,7 +27,7 @@ public partial class Solution
     /// </summary>
     /// <param name="s">The <see cref="string"/> to check.</param>
     /// <param name="p">The pattern to go against.</param>
-    /// <returns><see langword="true"/> if the capture is entirely <paramref name="s"/>, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if the capture is entirely <paramref name="s"/>; otherwise <see langword="false"/>.</returns>
     public bool IsMatch(string s, string p)
     {
         // The tuple (int, int) is (1) The index of s

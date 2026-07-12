@@ -23,7 +23,7 @@ public partial class Solution
     /// instances.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
-    /// <returns><see langword="true"/> if it is a valid binary search tree, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if it is a valid binary search tree; otherwise <see langword="false"/>.</returns>
     public bool IsValidBST(TreeNode root)
     {
         // TreeNode values can be from -2,147,483,648 to

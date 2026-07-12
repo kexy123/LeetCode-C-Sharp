@@ -18,7 +18,7 @@ public partial class Solution
     /// return <see langword="false"/>.
     /// </summary>
     /// <param name="x">The number to check in base-10.</param>
-    /// <returns><see cref="true"/> if it is a palindrome, otherwise <see cref="false"/>.</returns>
+    /// <returns><see cref="true"/> if it is a palindrome; otherwise <see cref="false"/>.</returns>
     public bool IsPalindrome(int x)
     {
         switch (x)

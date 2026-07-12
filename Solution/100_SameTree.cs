@@ -20,7 +20,7 @@ public partial class Solution
     /// </summary>
     /// <param name="p">The first <see cref="TreeNode"/>.</param>
     /// <param name="q">The second <see cref="TreeNode"/>.</param>
-    /// <returns><see langword="true"/> if both trees have the same structure, otherwise <see langword="false"/>.</returns>
+    /// <returns><see langword="true"/> if both trees have the same structure; otherwise <see langword="false"/>.</returns>
     public bool IsSameTree(TreeNode? p, TreeNode? q)
     {
         // Null checks; check if both parameters
