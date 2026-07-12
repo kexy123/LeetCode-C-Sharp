@@ -6,6 +6,8 @@
 //      Runtime:    0 ms
 //      Memory:     43.34 MB
 
+using Solution.LeetCodeImplementations;
+
 namespace Solution;
 
 public partial class Solution

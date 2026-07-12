@@ -12,6 +12,8 @@
 // Check compiled results for inline vs.
 // no inlining.
 
+using Solution.LeetCodeImplementations;
+
 namespace Solution;
 
 public partial class Solution
