@@ -1,4 +1,4 @@
-﻿namespace Solution;
+﻿namespace Solution.CSharp;
 
 internal class Program
 {

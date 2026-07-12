@@ -4,7 +4,7 @@ namespace Solution.LeetCodeImplementations;
 
 /// <summary>
 /// Simplified definition of <see cref="ListNode"/>
-/// in 2_AddTwoNumbers and other questions. Stores
+/// in 0002_AddTwoNumbers and other questions. Stores
 /// a base-10 digit and a pointer to another
 /// <see cref="ListNode"/>.
 /// </summary>

@@ -6,7 +6,7 @@
 //      Runtime:    X ms
 //      Memory:     XX.XX MB
 
-namespace Solution;
+namespace Solution.CSharp;
 
 public partial class Solution
 {

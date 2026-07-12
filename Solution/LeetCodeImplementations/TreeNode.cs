@@ -2,7 +2,7 @@
 
 /// <summary>
 /// Simplified definition of <see cref="TreeNode"/>
-/// in 94_BinaryTreeInorderReversal and other questions.
+/// in 0094_BinaryTreeInorderReversal and other questions.
 /// A binary tree node that points to two other
 /// <see cref="TreeNode"/> from its <see cref="left"/>
 /// and <see cref="right"/> and stores a value.
