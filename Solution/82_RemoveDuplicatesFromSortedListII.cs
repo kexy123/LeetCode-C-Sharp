@@ -55,9 +55,7 @@ public partial class Solution
 
             // Remove reference to the next
             // ListNode when we return start.next.
-#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
-            root.next = null;
-#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
+            root.next = null!;
             root = next;
         }
 

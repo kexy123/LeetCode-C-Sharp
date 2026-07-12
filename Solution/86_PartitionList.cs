@@ -60,9 +60,7 @@ public partial class Solution
         startRoot.next = end.next;
 
         // Prevent cyclic references.
-#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
-        endRoot.next = null;
-#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
+        endRoot.next = null!;
 
         return start.next;
     }

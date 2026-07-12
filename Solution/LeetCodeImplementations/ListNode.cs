@@ -46,13 +46,12 @@ public class ListNode
     /// unit-testing purposes.
     /// </remarks>
     /// <param name="values">The <see cref="IList{T}"/> collection.</param>
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     public ListNode(IList<int> values)
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     {
         ArgumentOutOfRangeException.ThrowIfZero(values.Count);
 
         val = values[0];
+        next = null!;
         ListNode current = this;
         for (int i = 1; i < values.Count; i++)
         {

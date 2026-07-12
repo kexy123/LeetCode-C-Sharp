@@ -59,10 +59,8 @@ public partial class Solution
         }
 
         ListNode start = root.next;
-#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
         // Cut off the point
-        root.next = null;
-#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
+        root.next = null!;
         // Connect the disconnected node.
         end!.next = head;
 
