@@ -36,6 +36,7 @@ public partial class Solution
             return null;
         }
 
+        // Convert to array.
         List<int> numList = [];
         while (nums is not null)
         {
