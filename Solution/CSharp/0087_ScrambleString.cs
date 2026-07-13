@@ -80,16 +80,16 @@ public partial class Solution
                 // Consider test case s1 = AB and s2 = BA. All slices
                 // will be separated by the vertical pipe '|'.
 
-                ReadOnlySpan<char> s1Left = s1Slice[0..i], s1Right = s1Slice[i..^0];
+                ReadOnlySpan<char> s1Left = s1Slice[..i], s1Right = s1Slice[i..];
 
                 // Check if the A in A|B and the B in B|A are equal scrambles,
                 // and the B in A|B and the A in B|A are equal scrambles.
-                if (CheckScramble(s1Left, s2Slice[0..i], s1Start, s2Start)
-                 && CheckScramble(s1Right, s2Slice[i..^0], s1Start + i, s2Start + i)
+                if (CheckScramble(s1Left, s2Slice[..i], s1Start, s2Start)
+                 && CheckScramble(s1Right, s2Slice[i..], s1Start + i, s2Start + i)
                 // Check if the A in A|B and the A in B|A are equal scrambles,
                 // and the B in A|B and the B in B|A are equal scrambles.
-                 || CheckScramble(s1Left, s2Slice[^i..^0], s1Start, s2Start + (s1Slice.Length - i))
-                 && CheckScramble(s1Right, s2Slice[0..^i], s1Start + i, s2Start))
+                 || CheckScramble(s1Left, s2Slice[^i..], s1Start, s2Start + (s1Slice.Length - i))
+                 && CheckScramble(s1Right, s2Slice[..^i], s1Start + i, s2Start))
                 {
                     // We found a segment split that are equal
                     // scrambles of each other either in crossed
