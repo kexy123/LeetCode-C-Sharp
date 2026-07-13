@@ -27,7 +27,7 @@ public partial class Solution
         // Checks if the structure and values of
         // the left node is symmetrical to the
         // right node.
-        static bool Compare(TreeNode? left,TreeNode? right)
+        static bool Compare(TreeNode? left, TreeNode? right)
         {
             if (left is null)
             {
