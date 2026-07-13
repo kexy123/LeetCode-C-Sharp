@@ -18,12 +18,12 @@ public partial class Solution
     /// <summary>
     /// Checks if the pattern <paramref name="p"/>
     /// matches the entire <see cref="string"/>
-    /// <paramref name="s"/>. The wildcard <c>.</c>
+    /// <paramref name="s"/>. The wildcard ('.')
     /// captures any single letter, and the
-    /// quantifier <c>*</c> suffixing a
-    /// character/wildcard captures many of that
-    /// character as possible. If that quantifier
-    /// can't capture any characters, it is ignored.
+    /// quantifier ('*') suffixing a character/wildcard
+    /// captures many of that character as possible.
+    /// If that quantifier can't capture any
+    /// characters, it is ignored.
     /// </summary>
     /// <param name="s">The <see cref="string"/> to check.</param>
     /// <param name="p">The pattern to go against.</param>

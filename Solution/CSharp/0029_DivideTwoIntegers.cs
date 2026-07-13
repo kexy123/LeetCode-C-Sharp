@@ -20,7 +20,7 @@ public partial class Solution
     /// </summary>
     /// <remarks>
     /// This method does not use the <see cref="int"/>
-    /// division, multiplication, or modulus operation.
+    /// division, multiplication, or modulus operations.
     /// </remarks>
     /// <param name="dividend">The numerator.</param>
     /// <param name="divisor">The denominator. Must not equal 0.</param>
@@ -34,7 +34,7 @@ public partial class Solution
         }
         else if (divisor == -1)
         {
-            // -2,147,483,648 cannot be turned
+            // int.MinValue cannot be turned
             // into a positive number as it
             // makes it greater than int.MaxValue,
             // so clamp it.
@@ -46,9 +46,8 @@ public partial class Solution
         // result. This is because the
         // negative integers contains one
         // number larger than the positive
-        // ones, which is -2,147,483,748
-        // compared to int.MaxValue =
-        // 2,147,483,647.
+        // ones, which is int.MinValue
+        // compared to int.MaxValue.
         int sign = 1;
         if (dividend > 0)
         {

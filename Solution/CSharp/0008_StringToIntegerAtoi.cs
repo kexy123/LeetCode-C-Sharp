@@ -16,8 +16,7 @@ public partial class Solution
     /// stream is invalid, i.e. non-leading whitespace,
     /// invalid characters, decimal point, and invalid sign
     /// operation placement. The number is clamped from
-    /// <see cref="int.MinValue"/> (-2,147,483,648) to
-    /// <see cref="int.MaxValue"/> (2,147,843,647).
+    /// <see cref="int.MinValue"/> to <see cref="int.MaxValue"/>.
     /// </summary>
     /// <param name="s">The <see cref="string"/> to convert.</param>
     /// <returns>The integer returned.</returns>
