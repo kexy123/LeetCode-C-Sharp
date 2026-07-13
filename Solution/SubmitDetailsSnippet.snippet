@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>LeetCode submission details</Title>
+			<Shortcut>subdet</Shortcut>
+			<Description>Creates a comment block that contains the details of the LeetCode submission.</Description>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>Date</ID>
+					<ToolTip>Numbered date at the time of submission.</ToolTip>
+					<Type>System.Int32</Type>
+					<Default>DD</Default>
+				</Literal>
+				<Literal>
+					<ID>Month</ID>
+					<ToolTip>Full month name in English at the time of submission.</ToolTip>
+					<Type>System.String</Type>
+					<Default>Mmmm</Default>
+				</Literal>
+				<Literal>
+					<ID>Year</ID>
+					<ToolTip>Numbered year at the time of submission.</ToolTip>
+					<Type>System.Int32</Type>
+					<Default>YYYY</Default>
+				</Literal>
+				<Literal>
+					<ID>Hour</ID>
+					<ToolTip>Numbered hour at the time of submission.</ToolTip>
+					<Type>System.Int32</Type>
+					<Default>HH</Default>
+				</Literal>
+				<Literal>
+					<ID>Minute</ID>
+					<ToolTip>Numbered minutes at the time of submission.</ToolTip>
+					<Type>System.Int32</Type>
+					<Default>MM</Default>
+				</Literal>
+				<Literal>
+					<ID>TestCases</ID>
+					<ToolTip>Number of testcases the submission passed.</ToolTip>
+					<Type>System.Int32</Type>
+					<Default>XX</Default>
+				</Literal>
+				<Literal>
+					<ID>Runtime</ID>
+					<ToolTip>Number of milliseconds the solution took.</ToolTip>
+					<Type>System.Int32</Type>
+					<Default>X</Default>
+				</Literal>
+				<Literal>
+					<ID>Memory</ID>
+					<ToolTip>How many Megabytes (MB) the solution used.</ToolTip>
+					<Type>System.Double</Type>
+					<Default>XX.XX</Default>
+				</Literal>
+			</Declarations>
+
+			<Code Language="CSharp">
+				<![CDATA[// RESULTS:
+//      Submitted on $Date$ $Month$ $Year$ at $Hour$:$Minute$
+//
+//      $TestCases$ / $TestCases$ testcases passed.
+//
+//      Runtime:    $Runtime$ ms
+//      Memory:     $Memory$ MB
+$end]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
