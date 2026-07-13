@@ -34,8 +34,8 @@ public partial class Solution
         (first!.val, second!.val) = (second.val, first.val);
 
 
-        // Traverses the binary tree in-order. When
-        // traversing the tree in-order on a binary
+        // Traverses the binary tree inorder. When
+        // traversing the tree inorder on a binary
         // search tree, the elements it passes through
         // must always be in ascending order, with
         // every element being greater than the
@@ -59,7 +59,7 @@ public partial class Solution
                 // thanks to a discussion post that
                 // pointed it out:
                 //
-                // Traverse the tree in-order and consider
+                // Traverse the tree inorder and consider
                 // it as the element array. If only one
                 // pair is in descending order, swap
                 // those elements around. If two pairs

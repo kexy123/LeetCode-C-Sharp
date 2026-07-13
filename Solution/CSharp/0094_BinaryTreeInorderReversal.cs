@@ -13,12 +13,12 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Computes the in-order traversal of the values
+    /// Computes the inorder traversal of the values
     /// of the <see cref="TreeNode"/> starting from
     /// <paramref name="root"/>.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
-    /// <returns>The in-order traversal.</returns>
+    /// <returns>The inorder traversal.</returns>
     public IList<int> InorderTraversal(TreeNode root)
     {
         IList<int> inOrder = [];
@@ -30,7 +30,7 @@ public partial class Solution
 
         // A depth-first search function that runs
         // itself on the left of its node, adds the
-        // value of node to the in-order list, then
+        // value of node to the inorder list, then
         // runs itself on the right of its node.
         void Traverse(TreeNode? node)
         {
