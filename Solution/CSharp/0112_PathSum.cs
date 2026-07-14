@@ -13,11 +13,11 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if the given binary <see cref="TreeNode"/>
-    /// contains a path from the <paramref name="root"/>
-    /// to a leaf <see cref="TreeNode"/> where the sum of
-    /// all the <see cref="TreeNode"/> between them is
-    /// equal to the <paramref name="targetSum"/>.
+    /// Checks if the given binary tree contains a path
+    /// from the <paramref name="root"/> to a leaf
+    /// <see cref="TreeNode"/> where the sum of all the
+    /// <see cref="TreeNode"/> between them is equal to
+    /// the <paramref name="targetSum"/>.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <param name="targetSum">The sum to find.</param>

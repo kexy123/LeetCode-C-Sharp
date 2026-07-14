@@ -17,7 +17,7 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Finds the shortest level in the binary <see cref="TreeNode"/>
+    /// Finds the shortest level in the binary tree
     /// that contains a leaf <see cref="TreeNode"/>.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>

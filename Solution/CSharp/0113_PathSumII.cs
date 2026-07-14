@@ -17,9 +17,8 @@ public partial class Solution
 {
     /// <summary>
     /// Returns all paths from the <paramref name="root"/>
-    /// of the binary <see cref="TreeNode"/> to the leaf
-    /// <see cref="TreeNode"/> whose sum is equal to the
-    /// <paramref name="targetSum"/>.
+    /// of the binary tree to the leaf <see cref="TreeNode"/>
+    /// whose sum is equal to the <paramref name="targetSum"/>.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <param name="targetSum">The target sum.</param>
