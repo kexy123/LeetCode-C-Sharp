@@ -10,8 +10,6 @@
 // convoluted method, until I found a different approach
 // to traversing the binary tree.
 
-using Solution.LeetCodeImplementations;
-
 namespace Solution.CSharp;
 
 public partial class Solution
@@ -54,7 +52,7 @@ public partial class Solution
             // or itself plus the maximum sum of the right
             // subtree.
             int maxParentSum = Math.Max(node.val, node.val + Math.Max(leftSum, rightSum));
-            
+
             // And then the maxSum can contain the maxParentSum
             // or the sum of the left and right subtrees connected
             // by this TreeNode.

@@ -6,8 +6,6 @@
 //      Runtime:    33 ms
 //      Memory:     44.47 MB
 
-using System.Text;
-
 namespace Solution.CSharp;
 
 public partial class Solution

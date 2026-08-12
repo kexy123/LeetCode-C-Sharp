@@ -12,8 +12,6 @@
 // Check compiled results for inline vs.
 // no inlining.
 
-using Solution.LeetCodeImplementations;
-
 namespace Solution.CSharp;
 
 public partial class Solution

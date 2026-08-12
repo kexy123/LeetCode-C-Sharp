@@ -116,7 +116,7 @@ public partial class Solution
             }
         }
 
-        
+
         IList<IList<string>> sequences = [];
         Dictionary<string, WordNode> nodes = [];
 

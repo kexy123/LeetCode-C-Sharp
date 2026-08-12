@@ -11,8 +11,6 @@
 // method, with the follow-up question
 // asking for an iterative approach.
 
-using System.Text;
-
 namespace Solution.CSharp;
 
 public partial class Solution

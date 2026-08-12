@@ -14,8 +14,6 @@
 // for memory efficiency. This is
 // somehow slower than 0051_NQueens however.
 
-using System.Collections;
-
 namespace Solution.CSharp;
 
 public partial class Solution
