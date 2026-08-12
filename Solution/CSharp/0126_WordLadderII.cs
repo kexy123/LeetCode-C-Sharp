@@ -147,7 +147,7 @@ public partial class Solution
             for (int i = 0; i < levelLength; i++)
             {
                 (string word, string? before) = queue.Dequeue();
-                words.Add(word);                
+                words.Add(word);
 
                 if (!nodes.TryGetValue(word, out WordNode? node))
                 {
