@@ -4,8 +4,8 @@ namespace Solution.LeetCodeImplementations;
 
 /// <summary>
 /// Simplified definition of <see cref="TreeNode"/>
-/// in 0094_BinaryTreeInorderReversal and other questions.
-/// A binary tree node that points to two other
+/// in 0094_BinaryTreeInorderReversal and other problems:
+/// a binary tree node that points to two other
 /// <see cref="TreeNode"/> from its <see cref="left"/>
 /// and <see cref="right"/> and stores a value.
 /// </summary>

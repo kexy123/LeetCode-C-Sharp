@@ -1,9 +1,9 @@
 ﻿namespace Solution.LeetCodeImplementations;
 
 /// <summary>
-/// Simplified definition of <see cref="node"/>
+/// Simplified definition of <see cref="Node"/>
 /// in 0116_PopulatingNextRightPointersInEachNode
-/// and other questions. A binary tree node that
+/// and other problems: a binary tree node that
 /// points to two other <see cref="Node"/> from
 /// its <see cref="left/> and <see cref="right"/>,
 /// stores a value and points to the <see cref="next"/>
