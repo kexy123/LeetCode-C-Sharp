@@ -6,6 +6,9 @@ internal class Program
 {
     public static void Main(string[] args)
     {
+        Console.Write("ENTER to continue . . .");
+        Console.ReadLine();
+
         Solution p = new();
 
         Stopwatch stopwatch = Stopwatch.StartNew();
