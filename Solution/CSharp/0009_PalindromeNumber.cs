@@ -11,31 +11,24 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Determines if a number in base-10 is
-    /// a palindrome, meaning that it can be
-    /// written forwards and backwards (e.g.
-    /// "racecar"). Negative numbers will
+    /// Determines if a number in base-10 is a palindrome. Negative numbers will
     /// return <see langword="false"/>.
     /// </summary>
     /// <param name="x">The number to check in base-10.</param>
-    /// <returns><see cref="true"/> if it is a palindrome; otherwise <see cref="false"/>.</returns>
+    /// <returns><see langword="true"/> if it is a palindrome; otherwise <see langword="false"/>.</returns>
     public bool IsPalindrome(int x)
     {
         switch (x)
         {
-            // If number is negative, the
-            // sign will make it not a
-            // palindrome.
+            // If number is negative, the sign will make it not a palindrome.
             case < 0:
                 return false;
-            // Any number with one digit
-            // will always be a palindrome.
+            // Any number with one digit will always be a palindrome.
             case < 10:
                 return true;
         }
 
-        // There can only be at most 10
-        // base-10 digits in an int.
+        // There can only be at most 10 base-10 digits in an int.
         byte[] digits = new byte[10];
 
         // Get each base-10 digit from x.
@@ -46,11 +39,8 @@ public partial class Solution
             x /= 10;
         }
 
-        // Check if it is a palindrome.
-        // Cancel early if the left is
-        // not equal to the right. We
-        // only need to check half of
-        // the digits due to the symmetry.
+        // Check if it is a palindrome. Cancel early if the left is not equal to the right. We
+        // only need to iterate over half of the digits because it is symmetric.
         int halfLength = left / 2;
         for (int right = 0; right <= halfLength; right++)
         {

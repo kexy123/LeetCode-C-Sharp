@@ -11,11 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Converts a <see cref="string"/> <paramref name="s"/>
-    /// to an <see cref="int"/> by reading until the number
-    /// stream is invalid, i.e. non-leading whitespace,
-    /// invalid characters, decimal point, and invalid sign
-    /// operation placement. The number is clamped from
+    /// Converts a <see langword="string"/> <paramref name="s"/> to an <see langword="int"/> by
+    /// reading until the number stream is invalid, i.e. non-leading whitespace, invalid characters,
+    /// decimal point, and invalid sign operation placement. The number is clamped from
     /// <see cref="int.MinValue"/> to <see cref="int.MaxValue"/>.
     /// </summary>
     /// <param name="s">The <see cref="string"/> to convert.</param>
@@ -33,8 +31,7 @@ public partial class Solution
                 case >= '0' and <= '9':
                     isLeading = false;
 
-                    // Ensure that leading sign operations
-                    // will terminate the stream.
+                    // Ensure that leading sign operations will terminate the stream.
                     if (sign == 0)
                     {
                         sign = 1;
@@ -42,16 +39,14 @@ public partial class Solution
 
                     int digit = s[i] - '0';
 
-                    // Check if the result, when multiplied
-                    // by 10 and added by digit, will cause
-                    // an integer overflow.
+                    // Check if the result, when multiplied by 10 and added by digit, will
+                    // cause an integer overflow.
                     if ((int.MaxValue - digit) / 10 < result)
                     {
                         return sign == -1 ? int.MinValue : int.MaxValue;
                     }
 
-                    // Shift the base-10 digits to the left
-                    // and add the digit.
+                    // Shift the base-10 digits to the left and add the digit.
                     result *= 10;
                     result += digit;
 
@@ -60,8 +55,7 @@ public partial class Solution
                 case '-':
                     isLeading = false;
 
-                    // Use sign variable as indication that
-                    // the sign operation is leading or not.
+                    // Use sign variable as indication that the sign operation is leading or not.
                     if (sign != 0)
                     {
                         return int.CopySign(result, sign);
@@ -79,8 +73,7 @@ public partial class Solution
 
                     break;
                 default:
-                    // Any other characters will terminate
-                    // the stream read.
+                    // Any other characters will terminate the stream read.
                     return int.CopySign(result, sign);
             }
         }

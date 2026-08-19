@@ -11,23 +11,20 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns the length of the longest substring
-    /// in <paramref name="s"/> that only contains
+    /// Returns the length of the longest substring in <paramref name="s"/> that only contains
     /// distinct characters.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to inspect.</param>
+    /// <param name="s">The <see langword="string"/> to inspect.</param>
     /// <returns>The length of the longest substring without repeating characters.</returns>
     public int LengthOfLongestSubstring(string s)
     {
-        // If s.Length is 0 or 1, simply return
-        // its length.
+        // If s.Length is 0 or 1, simply return its length.
         if (s.Length < 2)
         {
             return s.Length;
         }
 
         // This is a sliding window approach.
-
         int longest = 0;
         int left = 0;
 
@@ -44,8 +41,7 @@ public partial class Solution
                 }
             }
 
-            // Value numbering optimization
-            // reuses subtraction operation.
+            // Value numbering optimization reuses subtraction operation.
             if (right - left > longest)
             {
                 longest = right - left;

@@ -11,10 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Adds two numbers <paramref name="l1"/> and
-    /// <paramref name="l2"/> interpreted as digits in
-    /// <see cref="ListNode"/> from least-significant
-    /// to most-significant digit.
+    /// Adds two numbers <paramref name="l1"/> and <paramref name="l2"/> interpreted as digits in
+    /// the linked list from least-significant to most-significant digit.
     /// </summary>
     /// <param name="l1">The first number.</param>
     /// <param name="l2">The second number</param>
@@ -29,8 +27,7 @@ public partial class Solution
         int carryDigit = 0;
         while (l1Root is not null || l2Root is not null)
         {
-            // The quotient is the carry-on digit, and
-            // the remainder is the digit to store into
+            // The quotient is the carry-on digit, and the remainder is the digit to store into
             // the ListNode.
             (carryDigit, int digit) = Math.DivRem(
                 (l1Root?.val ?? 0) +     // Add digit from l1.
@@ -54,11 +51,9 @@ public partial class Solution
             }
         }
 
-        // The carry digit is guaranteed to only be
-        // 1 because of arithmetic properties with
-        // only two digits. It is also guaranteed
-        // that this carry-on will only exist when
-        // there is a ListNode.
+        // The carry digit is guaranteed to only be 1 because of arithmetic properties with
+        // two digits. It is also guaranteed that this carry-on will only exist when there
+        // is a ListNode.
         if (carryDigit > 0)
         {
             old!.next = new(1);
