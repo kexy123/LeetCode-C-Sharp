@@ -11,28 +11,11 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Converts a Roman numeral <see cref="string"/>
-    /// <paramref name="s"/> to an <see cref="int"/>.
-    /// <para>
-    /// For every power of ten ('I' for 1, 'X' for 10, 'C' for
-    /// 100, 'M' for 1,000), there exists its multiple of five
-    /// ('V' for 5, 'L' for 50, and 'D' for 50), and you simply
-    /// append that character to add it by its value, e.g. "XIII"
-    /// is 13.
-    /// </para>
-    /// <para>
-    /// If you put the digit before its multiple of five, i.e.
-    /// "IV" or "XL", it represents four times that power of ten.
-    /// For numbers greater than 4 times that power of ten, you
-    /// write its multiple of five plus that power of ten to get
-    /// to the number. If you reach 9 times that power of ten,
-    /// you do the same for 4 times that power of ten, except
-    /// with the power of ten after it, i.e. "IX" or "XC" for 9
-    /// and 90 respectively.
-    /// </para>
+    /// Converts a Roman numeral <see langword="string"/> <paramref name="s"/> to an
+    /// <see langword="int"/>.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to convert.</param>
-    /// <returns>The <see cref="int"/> value.</returns>
+    /// <param name="s">The <see langword="string"/> to convert.</param>
+    /// <returns>The <see langword="int"/> value.</returns>
     /// <exception cref="NotImplementedException"/>
     public int RomanToInt(string s)
     {
@@ -46,13 +29,10 @@ public partial class Solution
             // Find cases such as "IX", "XL", etc.
             if (value > prev)
             {
-                // The sum already has a value,
-                // so we must subtract by prev * 2;
-                // (sum + prev + value - prev - prev)
-                // = (sum + value - prev).
+                // The sum already has a value, so we must subtract by prev * 2;
+                // (sum + prev + value - prev - prev) = (sum + value - prev).
                 //
-                // prev << 1 compiles into less
-                // instructions than prev * 2.
+                // prev << 1 compiles into less instructions than prev * 2.
                 sum += value - (prev << 1);
             }
             else
@@ -67,10 +47,8 @@ public partial class Solution
         return sum;
 
 
-        // This is quicker than having a
-        // Dictionary<char, int>. Additionally,
-        // the Dictionary object cannot be
-        // constant despite its contents.
+        // This is quicker than having a Dictionary<char, int>. Additionally, the Dictionary object
+        // cannot be constant despite its contents.
         static int RomanCharToInt(char c)
         {
             return c switch

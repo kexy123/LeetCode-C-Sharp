@@ -11,8 +11,7 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="IList{string}"/> of every
-    /// possible phone letter combination for each phone
+    /// Returns an <see cref="IList{T}"/> of every possible phone letter combination for each phone
     /// digit in <paramref name="digits"/>.
     /// </summary>
     /// <param name="digits">The sequence of digits.</param>
@@ -24,8 +23,7 @@ public partial class Solution
 
         foreach (char num in digits)
         {
-            // Check which letters are
-            // in the given phone digit.
+            // Check which letters are in the given phone digit.
             string letters = num switch
             {
                 '2' => "abc",
@@ -45,19 +43,14 @@ public partial class Solution
         return result;
 
 
-        // Returns an array that copies from
-        // result and appends its letters,
-        // guaranteeing that it has every
-        // possible combination for that new
-        // digit.
+        // Returns an array that copies from result and appends its letters, guaranteeing that it has
+        // every possible combination for that new digit.
         IList<string> Extend(string letters)
         {
             IList<string> extended = [];
             if (result.Count == 0)
             {
-                // If there are zero elements,
-                // simply add the letters to
-                // the array.
+                // If there are zero elements, simply add the letters to the array.
                 foreach (char c in letters)
                 {
                     extended.Add(c.ToString());
@@ -69,8 +62,7 @@ public partial class Solution
                 {
                     foreach (string value in result)
                     {
-                        // Append the character to
-                        // the value.
+                        // Append the character to the value.
                         extended.Add(value + c);
                     }
                 }

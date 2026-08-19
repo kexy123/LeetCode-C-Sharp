@@ -11,12 +11,10 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if a stream of open and closing
-    /// parentheses (round brackets, square brackets,
-    /// and curly brackets) in <paramref name="s"/>
-    /// are malformed or not.
+    /// Checks if a stream of open and closing parentheses (round brackets, square brackets,
+    /// and curly brackets) in <paramref name="s"/> are malformed or not.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to inspect.</param>
+    /// <param name="s">The <see langword="string"/> to inspect.</param>
     /// <returns><see langword="true"/> if the brackets are not malformed; otherwise <see langword="false"/>.</returns>
     public bool IsValid(string s)
     {
@@ -25,8 +23,7 @@ public partial class Solution
         {
             switch (c)
             {
-                // Push the closing bracket
-                // to the parentheses.
+                // Push the closing bracket to the parentheses.
                 case '(':
                     parentheses.Push(')');
                     break;
@@ -37,11 +34,8 @@ public partial class Solution
                     parentheses.Push('}');
                     break;
                 default:
-                    // Simply check if there are too
-                    // many closing parentheses via
-                    // Stack<T>.TryPop(out T), or
-                    // the popped parenthesis is not
-                    // the current closing one.
+                    // Simply check if there are too many closing parentheses via TryPop,
+                    // or the popped parenthesis is not the current closing one.
                     if (!parentheses.TryPop(out char result) || result != c)
                     {
                         return false;
@@ -50,11 +44,8 @@ public partial class Solution
             }
         }
 
-        // If the number of parentheses is
-        // unbalanced (too many opening
-        // parentheses), check at the end
-        // of this method as well by looking
-        // at the count of the Stack.
+        // If the number of parentheses is unbalanced (too many opening parentheses), check
+        // at the end of this method as well by looking at the count of the Stack.
         return parentheses.Count == 0;
     }
 }

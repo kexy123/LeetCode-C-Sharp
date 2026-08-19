@@ -6,37 +6,30 @@
 //      Runtime:    3 ms
 //      Memory:     45.95 MB
 //
-// Is StringBuilder too inefficient in terms of
-// time? Fastest solution used StringBuilder,
-// although my implementation made the method
-// slower.
+// Is StringBuilder too inefficient in terms of time? Fastest solution used StringBuilder,
+// although my implementation made the method slower.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Converts an <see cref="int"/> <paramref name="num"/>
-    /// to a <see cref="string"/> in Roman numerals.
+    /// Converts an <see langword="int"/> <paramref name="num"/> to a <see langword="string"/>
+    /// in Roman numerals.
     /// <para>
-    /// For every power of ten ('I' for 1, 'X' for 10, 'C' for
-    /// 100, 'M' for 1,000), there exists its multiple of five
-    /// ('V' for 5, 'L' for 50, and 'D' for 50), and you simply
-    /// append that character to add it by its value, e.g. "XIII"
-    /// is 13.
+    /// For every power of ten ('I' for 1, 'X' for 10, 'C' for 100, 'M' for 1,000), there
+    /// exists its multiple of five ('V' for 5, 'L' for 50, and 'D' for 50), and you simply
+    /// append that character to add it by its value, e.g. "XIII" is 13.
     /// </para>
     /// <para>
-    /// If you put the digit before its multiple of five, i.e.
-    /// "IV" or "XL", it represents four times that power of ten.
-    /// For numbers greater than 4 times that power of ten, you
-    /// write its multiple of five plus that power of ten to get
-    /// to the number. If you reach 9 times that power of ten,
-    /// you do the same for 4 times that power of ten, except
-    /// with the power of ten after it, i.e. "IX" or "XC" for 9
-    /// and 90 respectively.
+    /// If you put the digit before its multiple of five, i.e. "IV" or "XL", it represents
+    /// four times that power of ten. For numbers greater than 4 times that power of ten, you
+    /// write its multiple of five plus that power of ten to get to the number. If you reach
+    /// 9 times that power of ten, you do the same for 4 times that power of ten, except with
+    /// the power of ten after it, i.e. "IX" or "XC" for 9 and 90 respectively.
     /// </para>
     /// </summary>
-    /// <param name="num">The <see cref="int"/> to convert.</param>
+    /// <param name="num">The <see langword="int"/> to convert.</param>
     /// <returns>The number in Roman numerals.</returns>
     public string IntToRoman(int num)
     {
@@ -50,14 +43,10 @@ public partial class Solution
         return roman.ToString();
 
 
-        // Every power of 10 has a pattern, which
-        // means we can simply repeat this code.
-        // We only need to do this for 'I', 'V',
-        // 'X', 'L', 'C', 'D', and 'M'. The
-        // divisor represents the power of ten.
-        // The primary represents the primary digit,
-        // and mul5 and mul10 represent the digits
-        // for 5x and 10x of the primary digit.
+        // Every power of 10 has a pattern, which means we can simply repeat this code. We only
+        // need to do this for 'I', 'V', 'X', 'L', 'C', 'D', and 'M'. The divisor represents the
+        // power of ten. The primary represents the primary digit, and mul5 and mul10 represent
+        // the digits for 5x and 10x of the primary digit.
         void AppendRoman(int divisor, char primary, char mul5, char mul10)
         {
             if (num < divisor)

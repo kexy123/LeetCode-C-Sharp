@@ -11,29 +11,24 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Finds value-distinct quadruplet values in
-    /// an <see cref="int"/> array <paramref name="nums"/>
-    /// whose sum adds to <paramref name="target"/>.
+    /// Finds value-distinct quadruplet values in an <see langword="int"/> array
+    /// <paramref name="nums"/> whose sum adds to <paramref name="target"/>.
     /// </summary>
     /// <param name="nums">The array to inspect.</param>
-    /// <param name="target">The target <see cref="int"/> sum.</param>
+    /// <param name="target">The target <see langword="int"/> sum.</param>
     /// <returns>The four numbers that sum to <paramref name="target"/>.</returns>
     public IList<IList<int>> FourSum(int[] nums, int target)
     {
-        // Sort the array. Ditto to
-        // 0016_ThreeSumClosest.
+        // Sort the array. Ditto to 0016_ThreeSumClosest.
         nums.Sort();
 
-        // This HashSet will make sure that
-        // duplicate quadruplets will be
-        // ignored.
+        // This HashSet will make sure that duplicate quadruplets will be ignored.
         HashSet<(int, int, int, int)> quadruplets = [];
         for (int i = 0; i < nums.Length - 3; i++)
         {
             for (int j = i + 1; j <= nums.Length - 3; j++)
             {
-                // Use long instead of int to
-                // avoid integer underflow cases.
+                // Use long instead of int to avoid integer underflow cases.
                 long complementary = (long)target - nums[i] - nums[j];
 
                 // Use dual-pointer approach.
@@ -50,15 +45,12 @@ public partial class Solution
 
                     if (difference > 0)
                     {
-                        // The difference is too
-                        // high, so go to a bigger
-                        // element.
+                        // The difference is too high, so go to a bigger element.
                         left++;
                     }
                     else
                     {
-                        // The difference is too low,
-                        // so go to a smaller element.
+                        // The difference is too low, so go to a smaller element.
                         right--;
                     }
                 }
