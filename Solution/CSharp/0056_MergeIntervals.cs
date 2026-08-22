@@ -11,8 +11,7 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Merges all overlapping intervals in
-    /// <paramref name="intervals"/>.
+    /// Merges all overlapping intervals in <paramref name="intervals"/>.
     /// </summary>
     /// <param name="intervals">The array of intervals (a starting and ending <see langword="int"/>) to merge.</param>
     /// <returns>The merged intervals.</returns>
@@ -27,11 +26,8 @@ public partial class Solution
         {
             if (intervals[i][0] > end)
             {
-                // The start of this interval does
-                // not overlap with the current
-                // interval the algorithm is holding,
-                // so add the interval and make the
-                // new interval this entry.
+                // The start of this interval does not overlap with the current interval the algorithm
+                // is holding, so add the interval and make the new interval this entry.
                 merged.Add([start, end]);
                 start = intervals[i][0];
             }
@@ -40,8 +36,7 @@ public partial class Solution
             end = Math.Max(end, intervals[i][1]);
         }
 
-        // Add the final interval to the
-        // merged array.
+        // Add the final interval to the merged array.
         merged.Add([start, end]);
 
         return [.. merged];

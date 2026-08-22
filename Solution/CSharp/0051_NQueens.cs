@@ -6,9 +6,7 @@
 //      Runtime:    5 ms
 //      Memory:     53.88 MB
 //
-// The question says distinct solutions,
-// but all solutions of the N-queens are
-// distinct anyway.
+// The question says distinct solutions, but all solutions of the N-queens are distinct anyway.
 // TODO: Use matrix instead of single array.
 
 namespace Solution.CSharp;
@@ -16,12 +14,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns all solutions of the N-queens
-    /// puzzle, that being all solutions where
-    /// you can place <paramref name="n"/>-queens
-    /// in a square chessboard of <paramref name="n"/>
-    /// width and <paramref name="n"/> height
-    /// such that they do not attack each other.
+    /// Returns all solutions to the N-queens puzzle, that being all solutions where you can place
+    /// <paramref name="n"/>-queens in a square chessboard of <paramref name="n"/> width and
+    /// <paramref name="n"/> height such that they do not attack each other.
     /// </summary>
     /// <param name="n">The size of the chessboard and the number of queens to place.</param>
     /// <returns>All solutions, each one being a string array.</returns>
@@ -31,9 +26,7 @@ public partial class Solution
 
         char[] queens = new char[n * n];
 
-        // Prepare the backtrackStack with
-        // all the coordinates of the first
-        // row.
+        // Prepare the backtrackStack with all the coordinates of the first row.
         Stack<(int x, int y)> backtrackStack = [];
         for (int x = 0; x < n; x++)
         {
@@ -46,10 +39,8 @@ public partial class Solution
             ZeroOut(queen.y);
             queens[queen.y * n + queen.x] = 'Q';
 
-            // Check if we reached the required
-            // number of queens, which corresponds
-            // to if we reached the end of the
-            // chessboard.
+            // Check if we reached the required number of queens, which corresponds to if we reached
+            // the end of the chessboard.
             int newY = queen.y + 1;
             if (newY == n)
             {
@@ -57,9 +48,8 @@ public partial class Solution
                 continue;
             }
 
-            // Check for every position in the row
-            // if it is not being attacked and
-            // push to the backtrackStack.
+            // Check for every position in the row if it is not being attacked and push to
+            // the backtrackStack.
             for (int x = 0; x < n; x++)
             {
                 if (!IsBeingAttacked(x, newY))
@@ -81,11 +71,8 @@ public partial class Solution
             }
         }
 
-        // Checks if the current position
-        // is being attacked by an existing
-        // queen. We can ignore the current
-        // row and the rows below it as
-        // they will contain no queens.
+        // Checks if the current position is being attacked by an existing queen. We can ignore the
+        // current row and the rows below it as they will contain no queens.
         bool IsBeingAttacked(int x, int y)
         {
             // Vertical pass.
@@ -132,9 +119,8 @@ public partial class Solution
             return false;
         }
 
-        // Gets the queen tile at the given
-        // coordinates and writes to tile.
-        // If out of bounds, return false.
+        // Gets the queen tile at the given coordinates and writes to tile. If out of bounds,
+        // return false.
         bool TryGetTile(int x, int y, out char tile)
         {
             if (x < 0 || y < 0 || x >= n || y >= n)
@@ -147,10 +133,8 @@ public partial class Solution
             return true;
         }
 
-        // Turns the solution char array into
-        // a list of n strings of n length
-        // that contain the positions of the
-        // queens on the chessboard.
+        // Turns the solution char array into a list of n strings of n length that contain the
+        // positions of the queens on the chessboard.
         IList<string> SerializeSolution()
         {
             IList<string> solution = [];

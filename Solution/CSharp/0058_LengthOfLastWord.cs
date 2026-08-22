@@ -11,16 +11,13 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Gets the length of the last valid
-    /// word in <paramref name="s"/>.
+    /// Gets the length of the last valid word in <paramref name="s"/>.
     /// </summary>
     /// <param name="s">The <see langword="string"/> to search.</param>
     /// <returns>The length of the last word.</returns>
     public int LengthOfLastWord(string s)
     {
-        // Find the first character that
-        // is not a space. Note that s
-        // will always contain at least
+        // Find the first character that is not a space. Note that s will always contain at least
         // one word.
         int i = s.Length - 1;
         char c = s[i];
@@ -29,18 +26,14 @@ public partial class Solution
             c = s[--i];
         }
 
-        // Find the first character that
-        // is a space, or reach the end
-        // of the string.
+        // Find the first character that is a space, or reach the end of the string.
         int wordBegin = i;
         while (c != ' ')
         {
             if (--i < 0)
             {
-                // We reached the end of the
-                // string, so we simply return
-                // wordBegin + 1 as strings are
-                // 0-indexed.
+                // We reached the end of the string, so we simply return wordBegin + 1 as strings
+                // are 0-indexed.
                 return wordBegin + 1;
             }
 

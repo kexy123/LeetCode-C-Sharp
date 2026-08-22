@@ -13,11 +13,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Generates a <paramref name="n"/> by
-    /// <paramref name="n"/> matrix where
-    /// numbers from 1 to <paramref name="n"/>-squared
-    /// are arranged in an outward-in clockwise
-    /// spiral.
+    /// Generates an <paramref name="n"/> by <paramref name="n"/> matrix where numbers from 1 to
+    /// <paramref name="n"/>-squared are arranged in an outward-in clockwise spiral.
     /// </summary>
     /// <param name="n">The size of the matrix.</param>
     /// <returns>The generated spiral matrix.</returns>

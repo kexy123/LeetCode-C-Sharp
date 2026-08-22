@@ -6,24 +6,21 @@
 //      Runtime:    2 ms
 //      Memory:     46.63 MB
 //
-// Similar to 0077_Combine, but with an added
-// numsIndex in the backtrackStack.
+// Similar to 0077_Combine, but with an added numsIndex in the backtrackStack.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="IList{T}"/> of all unique
-    /// subsets in the distinct <paramref name="nums"/>
+    /// Returns an <see cref="IList{T}"/> of all unique subsets in the distinct <paramref name="nums"/>
     /// <see langword="int"/> array.
     /// </summary>
     /// <param name="nums">The distinct <see langword="int"/> array.</param>
     /// <returns>All unique subsets of the <paramref name="nums"/> array.</returns>
     public IList<IList<int>> Subsets(int[] nums)
     {
-        // The empty subset will always exist in
-        // any nums array.
+        // The empty subset will always exist in any nums array.
         IList<IList<int>> combinations = [[]];
 
         // Keep track of the current subset.
@@ -35,15 +32,13 @@ public partial class Solution
         {
             if (result.index >= 0)
             {
-                // Add number to subset and add that
-                // combination to combinations.
+                // Add number to subset and add that combination to combinations.
                 subset.RemoveRange(result.index, subset.Count - result.index);
                 subset.Add(result.num);
                 combinations.Add([.. subset]);
             }
 
-            // Push more subsets. These will always
-            // be unique subsets.
+            // Push more subsets. These will always be unique subsets.
             for (int i = nums.Length - 1; i > result.numsIndex; i--)
             {
                 backtrackStack.Push((result.index + 1, i, nums[i]));

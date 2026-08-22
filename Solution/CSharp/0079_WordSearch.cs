@@ -11,12 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if the given <paramref name="word"/>
-    /// exists in the <see langword="char"/> matrix array
-    /// <paramref name="board"/>, given that you
-    /// can move in all four cardinal directions at
-    /// any point to search for <paramref name="word"/>,
-    /// but cannot go use the same cell.
+    /// Checks if the given <paramref name="word"/> exists in the <see langword="char"/> matrix array
+    /// <paramref name="board"/>, given that you can move in all four cardinal directions at any point
+    /// to search for <paramref name="word"/>, but cannot go use the same cell.
     /// </summary>
     /// <param name="board">The <see langword="char"/> matrix array to search in.</param>
     /// <param name="word">The <see langword="string"/> to search for.</param>
@@ -28,17 +25,12 @@ public partial class Solution
 
         if (word.Length > width * height)
         {
-            // The word cannot exist in the
-            // matrix as it is too long.
+            // The word cannot exist in the matrix as it is too long.
             return false;
         }
 
-        // Prepare the backtrackStack with
-        // the positions of the cells that
-        // are the first letter in the word.
-        // The index item in the tuple
-        // represents the current letter it
-        // is equal to.
+        // Prepare the backtrackStack with the positions of the cells that are the first letter in the
+        // word. The index item in the tuple represents the current letter it is equal to.
         Stack<(int x, int y, int index)> backtrackStack = [];
         for (int row = 0; row < height; row++)
         {
@@ -79,12 +71,8 @@ public partial class Solution
         return false;
 
 
-        // Tries to push the possible cell
-        // into backtrackStack, and returns
-        // true if this cell is the end of
-        // the word, signaling to end the
-        // search as the word exists in the
-        // matrix.
+        // Tries to push the possible cell into backtrackStack, and returns true if this cell is the
+        // end of the word, signaling to end the search as the word exists in the matrix.
         bool TrySearch(int x, int y, int index)
         {
             // Check if out of bounds.
@@ -93,8 +81,7 @@ public partial class Solution
                 return false;
             }
 
-            // Check if it is already a
-            // searched tile.
+            // Check if it is already a searched tile.
             if (searched.Contains((x, y)))
             {
                 return false;

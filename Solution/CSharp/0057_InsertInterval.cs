@@ -11,8 +11,7 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Inserts and merges the <paramref name="newInterval"/>
-    /// into the <paramref name="intervals"/>.
+    /// Inserts and merges the <paramref name="newInterval"/> into the <paramref name="intervals"/>.
     /// </summary>
     /// <param name="intervals">The intervals array to insert <paramref name="newInterval"/> into.</param>
     /// <param name="newInterval">The interval.</param>
@@ -27,46 +26,37 @@ public partial class Solution
         {
             if (isMerging)
             {
-                // Check if the left of entry is
-                // within the right of newInterval,
-                // in which case it should be part
-                // of the merge.
+                // Check if the left of entry is within the right of newInterval, in which case it
+                // should be part of the merge.
                 if (entry[0] <= newInterval[1])
                 {
                     mergeRight = Math.Max(entry[1], mergeRight);
                     continue;
                 }
 
-                // It has exited the merge, so
-                // add the merged interval to
-                // the result and conclude that
+                // It has exited the merge, so add the merged interval to the result and conclude that
                 // the interval has been inserted.
                 isMerging = false;
                 added = true;
                 result.Add([mergeLeft, mergeRight]);
             }
 
-            // Check if the left of newInterval
-            // is outside the right of entry.
+            // Check if the left of newInterval is outside the right of entry.
             if (added || newInterval[0] > entry[1])
             {
                 result.Add(entry);
             }
             else if (entry[0] > newInterval[1])
             {
-                // The entirety of the entry exists
-                // outside of newInterval, so there
-                // is no merge to begin; you can
-                // simply add the newInterval before
-                // the entry.
+                // The entirety of the entry exists outside of newInterval, so there is no merge to
+                // begin; you can simply add the newInterval before the entry.
                 result.Add(newInterval);
                 result.Add(entry);
                 added = true;
             }
             else
             {
-                // The entry is within newInterval,
-                // so begin the merge process.
+                // The entry is within newInterval, so begin the merge process.
                 mergeLeft = Math.Min(entry[0], newInterval[0]);
                 mergeRight = Math.Max(entry[1], newInterval[1]);
 
@@ -76,15 +66,12 @@ public partial class Solution
 
         if (isMerging)
         {
-            // Add the merged interval if still
-            // in the merging process.
+            // Add the merged interval if still in the merging process.
             result.Add([mergeLeft, mergeRight]);
         }
         else if (!added)
         {
-            // Add the interval if it exists at
-            // the end and didn't begin any
-            // merging process.
+            // Add the interval if it exists at the end and didn't begin any merging process.
             result.Add(newInterval);
         }
 

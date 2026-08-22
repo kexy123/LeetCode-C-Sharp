@@ -11,9 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see langword="int"/> array of the
-    /// outward-in clockwise spiral that would be
-    /// formed from the given <paramref name="matrix"/>.
+    /// Returns an <see langword="int"/> array of the outward-in clockwise spiral that would be formed
+    /// from the given <paramref name="matrix"/>.
     /// </summary>
     /// <param name="matrix">The <see langword="int"/> matrix.</param>
     /// <returns>The spiral transformed to an array.</returns>
@@ -28,9 +27,8 @@ public partial class Solution
         int top = 0, right = matrixWidth - 1, bottom = matrixHeight - 1, left = 0;
         int x = 0, y = 0;
 
-        // If the matrix has a width of 1,
-        // go down instead of right to
-        // avoid an IndexOutOfBoundsException.
+        // If the matrix has a width of 1, go down instead of right to avoid
+        // an IndexOutOfBoundsException.
         byte direction = (byte)(matrixWidth == 1 ? 1 : 0);
         for (int i = 0; i < matrixHeight * matrixWidth; i++)
         {

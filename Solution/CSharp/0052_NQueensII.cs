@@ -6,25 +6,16 @@
 //      Runtime:    6 ms
 //      Memory:     30.66 MB
 //
-// Directly borrowed from 0051_NQueens,
-// except it is more efficient now that
-// we only need to count the number of
-// solutions, which also means we can
-// reduce the char array into a BitArray
-// for memory efficiency. This is
-// somehow slower than 0051_NQueens however.
+// Directly borrowed from 0051_NQueens, except it is more efficient now that we only need to count the
+// number of solutions, which also means we can reduce the char array into a BitArray for memory
+// efficiency. This is somehow slower than 0051_NQueens however.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns the number of solutions of the
-    /// N-queens puzzle, that being all solutions
-    /// where you can place <paramref name="n"/>-queens
-    /// in a square chessboard of <paramref name="n"/>
-    /// width and <paramref name="n"/> height
-    /// such that they do not attack each other.
+    /// Returns the number of unique solutions to the N-queens puzzle.
     /// </summary>
     /// <param name="n">The size of the chessboard and the number of queens to place.</param>
     /// <returns>The number of solutions.</returns>

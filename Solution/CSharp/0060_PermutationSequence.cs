@@ -6,32 +6,26 @@
 //      Runtime:    0 ms
 //      Memory:     40.24 MB
 //
-// After watching a video on how a permutation
-// is formed by backtracking, I spotted an
-// invariant when they were lexicographically
-// ordered.
+// After watching a video on how a permutation is formed by backtracking, I spotted an invariant when
+// they were lexicographically ordered.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Gets the <paramref name="k"/>th
-    /// permutation from an <see langword="int"/>
-    /// array of <paramref name="n"/> elements
-    /// beginning as the sorted form.
+    /// Gets the <paramref name="k"/>th permutation from an <see langword="int"/> array of
+    /// <paramref name="n"/> elements beginning as the sorted form.
     /// </summary>
     /// <param name="n">The number of elements.</param>
     /// <param name="k">The permutation to get.</param>
     /// <returns>The permutation concatenated as a string of digits.</returns>
     public string GetPermutation(int n, int k)
     {
-        // Permutations are 0-indexed in
-        // this algorithm.
+        // Permutations are 0-indexed in this algorithm.
         k--;
 
-        // Compute n-factorial and preset
-        // the digits list.
+        // Compute n-factorial and preset the digits list.
         int factorial = 1;
         List<char> digits = [];
         for (int i = 1; i <= n; i++)
@@ -48,11 +42,8 @@ public partial class Solution
             // Decrement j and then divide by j.
             factorial /= j--;
 
-            // Dividing k by the factorial result,
-            // the remainder is the new value of
-            // k, and the digit is the digit in
-            // the current digits List to use for
-            // the permutation array. k is then
+            // Dividing k by the factorial result, the remainder is the new value of k, and the digit
+            // is the digit in the current digits List to use for the permutation array. k is then
             // decreased for finding the next digit.
             (int digit, k) = Math.DivRem(k, factorial);
 

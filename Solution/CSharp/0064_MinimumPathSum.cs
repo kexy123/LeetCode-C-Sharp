@@ -11,10 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Computes the lowest sum that can be
-    /// taken from top-left to bottom-right
-    /// given that you can only move right
-    /// or down.
+    /// Computes the lowest sum that can be taken from top-left to bottom-right given that you can only
+    /// move right or down.
     /// </summary>
     /// <param name="grid">The <see langword="int"/> matrix to observe.</param>
     /// <returns>The lowest sum of the possible path.</returns>
@@ -29,16 +27,13 @@ public partial class Solution
             {
                 if (y == yEnd && x == xEnd)
                 {
-                    // Note that the bottom-right cell
-                    // will add the following number:
-                    // Math.Min(int.MaxValue, int.MaxValue) =
-                    // int.MaxValue, so escape it before
+                    // Note that the bottom-right cell will add the following number:
+                    // Math.Min(int.MaxValue, int.MaxValue) = int.MaxValue, so escape it before
                     // it happens.
                     continue;
                 }
 
-                // Add the minimum of the bottom
-                // or right tile it can go to.
+                // Add the minimum of the bottom or right tile it can go to.
                 grid[y][x] += Math.Min(x < xEnd ? grid[y][x + 1] : int.MaxValue,
                                        y < yEnd ? grid[y + 1][x] : int.MaxValue);
             }

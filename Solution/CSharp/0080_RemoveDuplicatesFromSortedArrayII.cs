@@ -6,29 +6,23 @@
 //      Runtime:    143 ms
 //      Memory:     52.96 MB
 //
-// TODO: After personal case testing, this O(n)
-// solution should only take a few dozen microseconds
-// at best, however LeetCode says that it is over
-// 100 ms, with the fact that other solutions in C#
-// have spread-out runtimes between the 100-180 ms
-// range as well. Resubmit if they have fixed this
-// issue.
+// TODO: After personal case testing, this O(n) solution should only take a few dozen microseconds at
+// best, however LeetCode says that it is over 100 ms, with the fact that other solutions in C# have
+// spread-out runtimes between the 100-180 ms range as well. Resubmit if they have fixed this issue.
 
 namespace Solution.CSharp.RemoveDuplicatesFromSortedArrayII_0080;
 
 public partial class Solution
 {
     /// <summary>
-    /// Removes all duplicates in <paramref name="nums"/>
-    /// in-place such that each element will only appear
-    /// at most twice.
+    /// Removes all duplicates in <paramref name="nums"/> in-place such that each element will only
+    /// appear at most twice.
     /// </summary>
     /// <param name="nums">The <see langword="int"/> array to remove duplicates from.</param>
     /// <returns>The new length of the <paramref name="nums"/> array.</returns>
     public int RemoveDuplicates(int[] nums)
     {
-        // Track duplicates and the value
-        // of the previous element in nums.
+        // Track duplicates and the value of the previous element in nums.
         bool hasDuplicate = false;
         int old = nums[0];
 
@@ -40,16 +34,12 @@ public partial class Solution
             {
                 if (hasDuplicate)
                 {
-                    // This will only happen if
-                    // the element appeared more
-                    // than twice, so ignore this
-                    // element and only move the
-                    // right pointer.
+                    // This will only happen if the element appeared more than twice, so ignore this
+                    // element and only move the right pointer.
                     continue;
                 }
 
-                // This will happen if the first
-                // duplicate was found.
+                // This will happen if the first duplicate was found.
                 hasDuplicate = true;
             }
             else
@@ -59,14 +49,12 @@ public partial class Solution
                 hasDuplicate = false;
             }
 
-            // Move the rightNum to the
-            // index of the left.
+            // Move the rightNum to the index of the left.
             nums[left] = rightNum;
             left++;
         }
 
-        // The new length of the nums
-        // array is the left pointer.
+        // The new length of the nums array is the left pointer.
         return left;
     }
 }

@@ -11,11 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Searches for the given <paramref name="target"/>
-    /// in a <paramref name="matrix"/> of sorted elements
-    /// per row, given that the starting element of each
-    /// row is greater than or equal to the ending element
-    /// of the previous row.
+    /// Searches for the given <paramref name="target"/> in a <paramref name="matrix"/> of sorted
+    /// elements per row, given that the starting element of each row is greater than or equal to the
+    /// ending element of the previous row.
     /// </summary>
     /// <param name="matrix">The <see langword="int"/> matrix to search through.</param>
     /// <param name="target">The item.</param>
@@ -25,16 +23,14 @@ public partial class Solution
         int width = matrix[0].Length;
         int height = matrix.Length;
 
-        // Binary search algorithm. The matrix
-        // is sorted like an array, just that
-        // the indexing scheme is 2-dimensional.
+        // Binary search algorithm. The matrix is sorted like an array, just that the indexing scheme
+        // is 2-dimensional.
         int left = 0, right = width * height - 1;
         while (right >= left)
         {
             int midpoint = left + (right - left >> 1);
 
-            // The row is midpoint / width, while the
-            // column is midpoint % width.
+            // The row is midpoint / width, while the column is midpoint % width.
             int cell = matrix[midpoint / width][midpoint % width];
             if (cell == target)
             {

@@ -6,10 +6,8 @@
 //      Runtime:    2 ms
 //      Memory:     42.23 MB
 //
-// My first submission, which included a Stack
-// and StringBuilder, was extremely slow
-// compared to using a List and joining it via
-// string.Join().
+// My first submission, which included a Stack and StringBuilder, was extremely slow compared to using
+// a List and joining it via string.Join().
 
 namespace Solution.CSharp;
 
@@ -36,10 +34,8 @@ public partial class Solution
                     break;
                 case ".":
                 case "":
-                    // Do nothing; ignore. This handles
-                    // directories with multiple forward
-                    // slashes and '.' representing the
-                    // current directory.
+                    // Do nothing; ignore. This handles directories with multiple forward slashes and
+                    // '.' representing the current directory.
                     break;
                 default:
                     // Add folder name.
