@@ -11,29 +11,24 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Finds all unique combinations of numbers in
-    /// <paramref name="candidates"/> whose sum is
-    /// the <paramref name="target"/>. Duplicates
-    /// of combinations can be applied.
+    /// Finds all unique combinations of numbers in <paramref name="candidates"/> whose sum is the
+    /// <paramref name="target"/>. Duplicates of combinations can be applied.
     /// </summary>
-    /// <param name="candidates">A distinct <see cref="int"/> array.</param>
-    /// <param name="target">The target <see cref="int"/> to sum to.</param>
+    /// <param name="candidates">A distinct <see langword="int"/> array.</param>
+    /// <param name="target">The target <see langword="int"/> to sum to.</param>
     /// <returns>The <see cref="IList{T}"/> of unique combinations.</returns>
     public IList<IList<int>> CombinationSum(int[] candidates, int target)
     {
         IList<IList<int>> result = [];
 
-        // Prepare the backtrackStack with a list
-        // of possible states to go to.
+        // Prepare the backtrackStack with a list of possible states to go to.
         Stack<(int combinationIndex, int candidateIndex, int sum)> backtrackStack = [];
         for (int i = 0; i < candidates.Length; i++)
         {
             int value = candidates[i];
             if (value == target)
             {
-                // All elements in candidates are
-                // >= 2, so one of the combinations
-                // is itself.
+                // All elements in candidates are >= 2, so one of the combinations is itself.
                 result.Add([value]);
                 continue;
             }
@@ -57,16 +52,13 @@ public partial class Solution
                 int predictedSum = sum + candidates[i];
                 if (predictedSum < target)
                 {
-                    // There is another possible state
-                    // for the algorithm to peek through.
+                    // There is another possible state for the algorithm to peek through.
                     backtrackStack.Push((combinationIndex + 1, i, predictedSum));
                 }
                 else if (predictedSum == target)
                 {
-                    // The element is the final one that
-                    // sums to target, so simply add all
-                    // combination items and the extra
-                    // element to the result.
+                    // The element is the final one that sums to target, so simply add all combination
+                    // items and the extra element to the result.
                     result.Add([.. combination, candidates[i]]);
                 }
             }
@@ -75,8 +67,7 @@ public partial class Solution
         return result;
 
 
-        // Removes the elements at and after index
-        // in the IList<int> combination.
+        // Removes the elements at and after index in the IList<int> combination.
         void TrimCombination(int index)
         {
             int nItemsToRemove = combination.Count - index;

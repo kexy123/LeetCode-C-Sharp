@@ -6,24 +6,21 @@
 //      Runtime:    267 ms
 //      Memory:     52.84 MB
 //
-// This recursive approach uses memoization,
-// a technique which I have not used.
-// However, the fastest solution exploits
-// more invariants that I didn't discover.
+// This recursive approach uses memoization, a technique which I have not used. However, the fastest
+// solution exploits more invariants that I didn't discover.
 
 namespace Solution.CSharp.WildcardMatching_0044;
 
 public partial class Solution
 {
     /// <summary>
-    /// Determines if the pattern <paramref name="p"/>
-    /// greedily matches the entire <see cref="string"/>
-    /// <paramref name="s"/>, given the question mark ('?')
-    /// is a wildcard and the asterisk ('*') greedily matches
-    /// any sequence of characters, including an empty sequence.
+    /// Determines if the pattern <paramref name="p"/> greedily matches the entire
+    /// <see langword="string"/> <paramref name="s"/>, given the question mark ('?') is a wildcard and
+    /// 
+    /// the asterisk ('*') greedily matches any sequence of characters, including an empty sequence.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to go through.</param>
-    /// <param name="p">The <see cref="string"/> pattern.</param>
+    /// <param name="s">The <see langword="string"/> to go through.</param>
+    /// <param name="p">The <see langword="string"/> pattern.</param>
     /// <returns><see langword="true"/> if the pattern <paramref name="p"/> matched; otherwise <see langword="false"/>.</returns>
     public bool IsMatch(string s, string p)
     {
@@ -32,10 +29,8 @@ public partial class Solution
         return Match(0, 0);
 
 
-        // A recursive string pattern matching algorithm.
-        // This method will halt and return true if and
-        // only if the indexers for s and p reached the
-        // end at the same time.
+        // A recursive string pattern matching algorithm. This method will halt and return true iff
+        // the indexers for s and p reached the end at the same time.
         bool Match(int iS, int iP)
         {
             for (; iP < p.Length; iP++)
@@ -43,16 +38,14 @@ public partial class Solution
                 char pChar = p[iP];
                 switch (pChar)
                 {
-                    // Greedily match any sequence
-                    // of characters until it finds
-                    // the biggest possible match.
+                    // Greedily match any sequence of characters until it finds the biggest possible
+                    // match.
                     case '*':
                         (char? branch, int minNextMatchLength) = TrackForTarget(ref iP);
                         if (branch is null)
                         {
-                            // Pattern ends in a sequence of
-                            // asterisks, so the match will
-                            // be true nonetheless.
+                            // Pattern ends in a sequence of asterisks, so the match will be
+                            // true nonetheless.
                             return true;
                         }
 
@@ -62,15 +55,13 @@ public partial class Solution
                             {
                                 if (!invalidMatches.Contains((i, iP)) && Match(i, iP))
                                 {
-                                    // The rest of s was captured
-                                    // in p by the Match method.
+                                    // The rest of s was captured in p by the Match method.
                                     return true;
                                 }
                                 else
                                 {
-                                    // Add the invalid state to
-                                    // invalidMatches to not go
-                                    // through this point again.
+                                    // Add the invalid state to invalidMatches to not go through this
+                                    // point again.
                                     invalidMatches.Add((i, iP));
                                 }
                             }
@@ -81,15 +72,13 @@ public partial class Solution
                     case '?':
                         if (iS >= s.Length)
                         {
-                            // iS already reached the end
-                            // while iP didn't.
+                            // iS already reached the end while iP didn't.
                             return false;
                         }
                         break;
                     // Check for char equality.
                     default:
-                        // Check if in range and
-                        // is equal to pChar.
+                        // Check if in range and is equal to pChar.
                         if (iS >= s.Length || s[iS] != pChar)
                         {
                             return false;
@@ -99,21 +88,14 @@ public partial class Solution
                 iS++;
             }
 
-            // iP reached the end now, so we
-            // check if iS also reached the
-            // end of the string.
+            // iP reached the end now, so we check if iS also reached the end of the string.
             return iS == s.Length;
         }
 
-        // Skips all asterisks in the stream
-        // until it finds a wildcard or a
-        // regular character. If s ends in
-        // asterisks, return null, which
-        // indicates that p entirely captures
-        // s already. The int that returns
-        // is the minimum number of characters
-        // to keep at the end of the stream
-        // when trying to find a match.
+        // Skips all asterisks in the stream until it finds a wildcard or a regular character. If s
+        // ends in asterisks, return null, which indicates that p entirely captures s already. The int
+        // that returns is the minimum number of characters to keep at the end of the stream when
+        // trying to find a match.
         (char? branch, int minNextMatchLength) TrackForTarget(ref int iP)
         {
             int nextMatchLength = 0;

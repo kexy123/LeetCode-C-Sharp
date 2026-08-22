@@ -11,12 +11,10 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Calculates the amount of water that can
-    /// be trapped in the <paramref name="height"/>
-    /// array if the values were the heights of
-    /// columns of a unit width.
+    /// Calculates the amount of water that can be trapped in the <paramref name="height"/> array if
+    /// the values were the heights of columns of a unit width.
     /// </summary>
-    /// <param name="height">An <see cref="int"/> array.</param>
+    /// <param name="height">An <see langword="int"/> array.</param>
     /// <returns>The amount of water that can be contained.</returns>
     public int Trap(int[] height)
     {
@@ -27,19 +25,15 @@ public partial class Solution
         {
             if (height[i] >= pivotValue)
             {
-                // Reached the end of the rainwater
-                // area, so accumulate rainwater.
+                // Reached the end of the rainwater area, so accumulate rainwater.
                 AccumulateRainWater(pivot, i);
                 pivot = i;
                 pivotValue = height[i];
             }
         }
 
-        // The pivot would be the highest
-        // element. Since we accumulated
-        // water on the left of the highest
-        // pivot, we now check for the right
-        // side of the array.
+        // The pivot would be the highest element. Since we accumulated water on the left of the
+        // highest pivot, we now check for the right side of the array ending at that pivot.
         int highestPivot = pivot;
         pivot = height.Length - 1;
         pivotValue = height[^1];
@@ -56,8 +50,7 @@ public partial class Solution
         return sum;
 
 
-        // Accumulates by the complement of the lower
-        // column from the left and right columns.
+        // Accumulates rainwater via the complement of the columns between the left and right columns.
         void AccumulateRainWater(int left, int right)
         {
             int min = Math.Min(height[left], height[right]);

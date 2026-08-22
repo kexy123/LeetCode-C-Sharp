@@ -11,21 +11,17 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Locates the first occurrence of <paramref name="needle"/>
-    /// from the <paramref name="haystack"/>.
+    /// Locates the first occurrence of <paramref name="needle"/> from the <paramref name="haystack"/>.
     /// </summary>
-    /// <param name="haystack">The <see cref="string"/> to search in.</param>
-    /// <param name="needle">The <see cref="string"/> to search for.</param>
-    /// <returns>The index of the first occurence where <paramref name="needle"/> was found in <paramref name="haystack"/>; otherwise -1.</returns>
+    /// <param name="haystack">The <see langword="string"/> to search in.</param>
+    /// <param name="needle">The <see langword="string"/> to search for.</param>
+    /// <returns>The index of the first occurrence where <paramref name="needle"/> was found in <paramref name="haystack"/>; otherwise -1.</returns>
     public int StrStr(string haystack, string needle)
     {
         int needleLength = needle.Length;
 
-        // We can cut off early as any
-        // index greater than
-        // haystack.Length - needleLength
-        // will not have a size big enough
-        // for needle to match.
+        // We can cut off early as any index greater than haystack.Length - needleLength will not have
+        // a size big enough for needle to match.
         for (int i = 0; i <= haystack.Length - needleLength; i++)
         {
             // Check if the substring is equal to the needle.
@@ -35,7 +31,7 @@ public partial class Solution
             }
         }
 
-        // Return -1 if a match was not found.
+        // Match was not found.
         return -1;
     }
 }

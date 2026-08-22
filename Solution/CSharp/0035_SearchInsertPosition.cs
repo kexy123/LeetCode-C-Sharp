@@ -11,13 +11,12 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Searches for the occurrence of <paramref name="target"/>
-    /// in the distinct sorted <see cref="int"/> array
-    /// <paramref name="nums"/>. If not, returns the index of
-    /// where the item would be inserted at.
+    /// Searches for the occurrence of <paramref name="target"/> in the distinct sorted
+    /// <see langword="int"/> array <paramref name="nums"/>. If not, returns the index of where the
+    /// item would be inserted at.
     /// </summary>
-    /// <param name="nums">The distinct sorted <see cref="int"/> array.</param>
-    /// <param name="target">The target <see cref="int"/> to search for.</param>
+    /// <param name="nums">The distinct sorted <see langword="int"/> array.</param>
+    /// <param name="target">The target <see langword="int"/> to search for.</param>
     /// <returns>The index of the occurrence, otherwise the index of where it should be inserted at.</returns>
     public int SearchInsert(int[] nums, int target)
     {
@@ -40,12 +39,8 @@ public partial class Solution
             }
         }
 
-        // We need to find where the number
-        // would be inserted at now. At
-        // this point, left == right.
-        // If nums[left] < target, then
-        // it must be next to the left
-        // pointer. Otherwise, it is the
+        // We need to find where the number would be inserted at now. At this point, left == right. If
+        // nums[left] < target, then it must be right next to the left pointer. Otherwise, it is the
         // left pointer.
         return nums[left] < target ? left + 1 : left;
     }

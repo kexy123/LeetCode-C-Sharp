@@ -11,23 +11,20 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Merges all given <see cref="ListNode"/> in
-    /// ascending order, assuming that they are
+    /// Merges all given <see cref="ListNode"/> in ascending order, assuming that they are
     /// already ordered.
     /// </summary>
     /// <param name="lists">Array of <see cref="ListNode"/>.</param>
     /// <returns>The resulting merged <see cref="ListNode"/>.</returns>
     public ListNode? MergeKLists(ListNode?[] lists)
     {
-        // If there are no ListNodes,
-        // simply return nothing.
+        // If there are no ListNodes, simply return nothing.
         if (lists.Length == 0)
         {
             return null;
         }
 
-        // Make the first ListNode the
-        // primary one.
+        // Make the first ListNode the primary one.
         ListNode? result = null;
         int i = 0;
         while (result is null && i < lists.Length)
@@ -36,8 +33,7 @@ public partial class Solution
             i++;
         }
 
-        // If lists only contains empty
-        // ListNodes, return null.
+        // If lists only contains empty ListNodes, return null.
         if (i > lists.Length)
         {
             return null;
@@ -47,8 +43,7 @@ public partial class Solution
         {
             ListNode list = lists[j]!;
 
-            // If one of the lists is empty,
-            // do not perform merge operation.
+            // If one of the lists is empty, do not perform merge operation.
             if (list is null)
             {
                 continue;

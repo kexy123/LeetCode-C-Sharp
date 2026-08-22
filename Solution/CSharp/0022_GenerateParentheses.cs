@@ -6,33 +6,28 @@
 //      Runtime:    3 ms
 //      Memory:     49.99 MB
 //
-// Used to struggle at this. Thought of a
-// recursive approach using a tree, but
-// then saw that it was a state backtracking
-// and pruning problem.
+// Used to struggle at this. Thought of a recursive approach using a tree, but then saw that it was a
+// state backtracking and pruning problem.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns all correctly-formed <see cref="string"/>
-    /// for <paramref name="n"/> pairs of parentheses.
+    /// Returns all correctly-formed <see langword="string"/> for <paramref name="n"/> pairs
+    /// of parentheses.
     /// </summary>
     /// <param name="n">The number of pairs of parentheses.</param>
-    /// <returns>All correct <see cref="string"/> containing <paramref name="n"/> pairs of parentheses.</returns>
+    /// <returns>All correct <see langword="string"/> containing <paramref name="n"/> pairs of parentheses.</returns>
     public IList<string> GenerateParenthesis(int n)
     {
         IList<string> results = [];
 
-        // The length of each correct string
-        // is double n because it represents
-        // how many pairs of parentheses there
-        // are.
+        // The length of each correct string is double n because it represents how many pairs of
+        // parentheses there are.
         int parenthesesLength = n << 1;
 
-        // This is a backtracking approach to
-        // creating the parentheses.
+        // This is a backtracking approach to creating the parentheses.
         Stack<(int, int, int)> stack = [];
 
         StringBuilder current = new(new string(')', parenthesesLength));
@@ -44,13 +39,10 @@ public partial class Solution
             (int count, int closing, int startingPoint) = stack.Pop();
             current[startingPoint] = startingPoint++ == 0 ? '(' : ')';
 
-            // Add opening parentheses until
-            // it reaches n.
+            // Add opening parentheses until it reaches n.
             while (count < n)
             {
-                // If a closing parenthesis
-                // can be added, add a state
-                // to that point.
+                // If a closing parenthesis can be added, add a state to that point.
                 if (closing < count)
                 {
                     stack.Push((count, closing + 1, startingPoint));
@@ -61,9 +53,7 @@ public partial class Solution
                 count++;
             }
 
-            // Add closing parentheses to
-            // match the length. This will
-            // guarantee a correct stream
+            // Add closing parentheses to match the length. This will guarantee a correct stream
             // of parentheses.
             while (startingPoint < parenthesesLength)
             {

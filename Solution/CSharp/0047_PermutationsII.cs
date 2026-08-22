@@ -6,21 +6,17 @@
 //      Runtime:    341 ms
 //      Memory:     51.51 MB
 //
-// TODO: A backtracking recursive algorithm
-// was the fastest solution, and the intended
-// topic this question hinted on was backtracking,
-// so rewrite this algorithm when appropriate.
+// TODO: A backtracking recursive algorithm was the fastest solution, and the intended topic this
+// question hinted on was backtracking, so rewrite this algorithm when appropriate.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns all unique permutations after
-    /// <paramref name="nums"/> before going
-    /// back to itself.
+    /// Returns all unique permutations after <paramref name="nums"/> before going back to itself.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array that can contain duplicates to permute.</param>
+    /// <param name="nums">The <see langword="int"/> array that can contain duplicates to permute.</param>
     /// <returns>The array of unique permutations.</returns>
     public IList<IList<int>> PermuteUnique(int[] nums)
     {
@@ -33,20 +29,16 @@ public partial class Solution
             numPermutations *= i;
         }
 
-        // Create the base permutation array
-        // which is the first lexicographical
-        // array in the permutation sequence,
-        // that being a sorted-ascending array.
+        // Create the base permutation array which is the first lexicographical array in the
+        // permutation sequence, that being a sorted-ascending array.
         int[] basePermutation = new int[nums.Length];
         for (int i = 0; i < nums.Length; i++)
         {
             basePermutation[i] = i;
         }
 
-        // Check uniqueness if the conversion to
-        // HashSet<int> removed duplicates in the
-        // nums array. If unique, simply add all
-        // permutations.
+        // Check uniqueness if the conversion to HashSet<int> removed duplicates in the nums array. If
+        // unique, simply add all permutations.
         bool isUnique = nums.ToHashSet().Count == nums.Length;
 
         for (int i = 1; i < numPermutations; i++)
@@ -58,9 +50,8 @@ public partial class Solution
         return results;
 
 
-        // Borrowed method from 0031_NextPermutation,
-        // but uses basePermutation as a mask to
-        // swap nums array.
+        // Borrowed method from 0031_NextPermutation, but uses basePermutation as a mask to swap
+        // nums array.
         void NextPermutation()
         {
             int k = -1, l = -1;
@@ -95,29 +86,25 @@ public partial class Solution
             }
         }
 
-        // Swaps both elements in the basePermutation
-        // and the nums array.
+        // Swaps both elements in the basePermutation and the nums array.
         void Swap(int i, int j)
         {
             (nums[i], nums[j]) = (nums[j], nums[i]);
             (basePermutation[i], basePermutation[j]) = (basePermutation[j], basePermutation[i]);
         }
 
-        // Attempts to add the current permutation
-        // of the nums array to the results array
-        // which must satisfy uniqueness.
+        // Attempts to add the current permutation of the nums array to the results array which must
+        // satisfy uniqueness.
         void TryAdd()
         {
             if (!isUnique)
             {
                 for (int i = 0; i < results.Count; i++)
                 {
-                    // This implementation is quicker than
-                    // nums.SequenceEquals(results[i]);
-                    // and avoids the check for length equality.
+                    // This implementation is quicker than nums.SequenceEquals(results[i]); and avoids
+                    // the check for length equality.
 
-                    // Check for value equality in
-                    // each element of both arrays.
+                    // Check for value equality in each element of both arrays.
                     IList<int> permutation = results[i];
                     for (int j = 0; j < nums.Length; j++)
                     {
@@ -132,9 +119,8 @@ public partial class Solution
                 }
             }
 
-            // If none of the arrays in results
-            // contains the current permutation
-            // of nums, add to the result.
+            // If none of the arrays in results contains the current permutation of nums, add to
+            // the result.
             results.Add([.. nums]);
         }
     }

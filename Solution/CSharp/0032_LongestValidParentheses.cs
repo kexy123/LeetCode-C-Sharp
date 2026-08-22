@@ -11,20 +11,17 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Finds the longest substring of a valid
-    /// sequence of open and closing parentheses.
+    /// Finds the longest substring of a valid sequence of open and closing parentheses.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to inspect.</param>
+    /// <param name="s">The <see langword="string"/> to inspect.</param>
     /// <returns>The length of the longest valid substring.</returns>
     public int LongestValidParentheses(string s)
     {
-        // Trim any starting closing parentheses ')'
-        // as they can never form a valid sequence.
+        // Trim any starting closing parentheses ')' as they can never form a valid sequence.
         int left = 0;
         TruncateLeft(ref left);
 
-        // Ditto to the first loop, but for the
-        // end, trimming ending opening parentheses.
+        // Ditto to the first loop, but for the end, trimming ending opening parentheses.
         int right = s.Length - 1;
         while (right >= 0 && s[right] != ')')
         {
@@ -33,17 +30,14 @@ public partial class Solution
 
         int length = right - left + 1;
 
-        // Check if s contains only open or closing
-        // parentheses, not both. Additionally, check
-        // if the length is less than 2, which can
-        // never form a valid sequence of parentheses.
+        // Check if s contains only open or closing parentheses, but not both. Additionally, check if
+        // the length is less than 2, which can never form a valid sequence of parentheses.
         if (left >= s.Length || right < 0 || length < 2)
         {
             return 0;
         }
 
-        // A stack of indices and the last net
-        // of parentheses at that point. 
+        // A Stack of indices and the last net of parentheses at that point. 
         Stack<(int index, int lastNet)> increasingBalance = [];
 
         // The net parentheses in the stream.
@@ -55,10 +49,8 @@ public partial class Solution
             if (s[i] == '(')
             {
                 netAmount++;
-                // This is to prevent elements from
-                // increasingBalance from being discarded
-                // by other elements with the same
-                // netAmount.
+                // This is to prevent elements from increasingBalance from being discarded by other
+                // elements with the same netAmount.
                 if (netAmount > maxBalance)
                 {
                     maxBalance = netAmount;
@@ -71,12 +63,9 @@ public partial class Solution
 
                 if (netAmount < 0)
                 {
-                    // The pointer i reached an invalid
-                    // stream of closing parentheses ')'
-                    // that cannot form a pair, so skip
-                    // all of them until it reaches an
-                    // open parentheses '(' and reset
-                    // appropriate variables.
+                    // The pointer i reached an invalid stream of closing parentheses ')' that cannot
+                    // form a pair, so skip all of them until it reaches an open parentheses '(' and
+                    // reset appropriate variables.
                     increasingBalance.Clear();
                     TruncateLeft(ref i);
                     i--;
@@ -87,8 +76,7 @@ public partial class Solution
                 else
                 {
                     bool peeked = increasingBalance.TryPeek(out var result);
-                    // Check if lastBalance of the first element
-                    // in the Stack overshoots the netAmount.
+                    // Check if lastBalance of the first element in the Stack overshoots the netAmount.
                     // If so, we discard that element.
                     if (peeked && result.lastNet > netAmount + 1)
                     {
@@ -97,14 +85,11 @@ public partial class Solution
                         peeked = increasingBalance.TryPeek(out result);
                     }
 
-                    // Check if the difference between now
-                    // and the last point of the same net
-                    // parentheses is longer than the longest
-                    // capture found so far.
+                    // Check if the difference between now and the last point of the same net
+                    // parentheses is longer than the longest capture found so far.
                     if (peeked && i - result.index > longest)
                     {
-                        // Note that i - result.index is one
-                        // off from the actual substring length.
+                        // Note that i - result.index is one off from the actual substring length.
                         longest = i - result.index;
                     }
                 }
@@ -114,8 +99,7 @@ public partial class Solution
         return longest + 1;
 
 
-        // Move the left pointer i until it
-        // finds an open parenthesis '('.
+        // Move the left pointer i until it finds an open parenthesis '('.
         void TruncateLeft(ref int i)
         {
             while (i < s.Length && s[i] != '(')

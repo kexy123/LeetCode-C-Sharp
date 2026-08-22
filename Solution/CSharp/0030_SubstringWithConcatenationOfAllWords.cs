@@ -6,24 +6,20 @@
 //      Runtime:    2662 ms
 //      Memory:     56.17 MB
 //
-// TODO: This code is extremely inefficient,
-// and was submitted with an unnecessary Queue<T>
-// implementation. Resubmit with more efficient
-// form at the bottom. Resubmission at this time
-// (26 June 2026) causes a time limit exceeded
-// error for case #182.
+// TODO: This code is extremely inefficient, and was submitted with an unnecessary Queue<T>
+// implementation. Resubmit with more efficient form at the bottom. Resubmission at this time
+// (26 June 2026) caused a time limit exceeded error for case #182.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Locates all starting indices in the <see cref="string"/>
-    /// <paramref name="s"/> that concatenates all of the words
-    /// in <paramref name="words"/> exactly once regardless of
-    /// order. Duplicate words are not ignored.
+    /// Locates all starting indices in the <see langword="string"/> <paramref name="s"/> that
+    /// concatenates all of the words in <paramref name="words"/> exactly once regardless of order.
+    /// Duplicate words are not ignored.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> containing words.</param>
+    /// <param name="s">The <see langword="string"/> containing words.</param>
     /// <param name="words">The array of words. Must all be the same length.</param>
     /// <returns>The list of indices where the substring after it contains all of the words concatenated once.</returns>
     public IList<int> FindSubstring(string s, string[] words)
@@ -44,8 +40,7 @@ public partial class Solution
             }
         }
 
-        // It is guaranteed for at least one word to
-        // exist in the words array.
+        // It is guaranteed for at least one word to exist in the words array.
         int wordLength = words[0].Length;
 
         List<int> results = [];
@@ -72,8 +67,7 @@ public partial class Solution
                 }
             }
 
-            // Check if j successfully found a concatenated
-            // substring of all words in the words array
+            // Check if j successfully found a concatenated substring of all words in the words array
             // at least once, not ignoring duplicate words.
             if (j == words.Length)
             {
@@ -98,12 +92,12 @@ public partial class Solution
 //public partial class Solution
 //{
 //    /// <summary>
-//    /// Locates all starting indices in the <see cref="string"/>
+//    /// Locates all starting indices in the <see langword="string"/>
 //    /// <paramref name="s"/> that concatenates all of the words
 //    /// in <paramref name="words"/> exactly once regardless of
 //    /// order. Duplicate words are not ignored.
 //    /// </summary>
-//    /// <param name="s">The <see cref="string"/> containing words.</param>
+//    /// <param name="s">The <see langword="string"/> containing words.</param>
 //    /// <param name="words">The array of words. Must all be the same length.</param>
 //    /// <returns>The list of indices where the substring after it contains all of the words concatenated once.</returns>
 //    public IList<int> FindSubstring(string s, string[] words)

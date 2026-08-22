@@ -6,34 +6,29 @@
 //      Runtime:    10 ms
 //      Memory:     44.43 MB
 //
-// This question is designed where the
-// simplest solution would be a recursive
-// method, with the follow-up question
-// asking for an iterative approach.
+// This question is designed where the simplest solution would be a recursive method, with the
+// follow-up question asking for an iterative approach.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Repetitively performs run-length encoding on
-    /// the base <see cref="string"/> <c>"1"</c>
+    /// Repetitively performs run-length encoding on the base <see langword="string"/> <c>"1"</c>
     /// <paramref name="n"/> times.
     /// </summary>
-    /// <param name="n">A positive <see cref="int"/> value that determines how many times to encode.</param>
-    /// <returns>The resulting <see cref="string"/>.</returns>
+    /// <param name="n">A positive <see langword="int"/> value that determines how many times to encode.</param>
+    /// <returns>The resulting <see langword="string"/>.</returns>
     public string CountAndSay(int n)
     {
         string result = "1";
 
-        // Skip the base case, as result is
-        // already the base case.
+        // Skip the base case, as result is already the base case.
         for (int i = 1; i < n; i++)
         {
             StringBuilder iterated = new();
 
-            // Perform run-length encoding on
-            // iterated.
+            // Perform run-length encoding on iterated.
             int count = 0;
             char unique = result[0];
             foreach (char c in result)
@@ -44,9 +39,7 @@ public partial class Solution
                 }
                 else
                 {
-                    // Reset counter, append count
-                    // and unique character to
-                    // run-length encoding string.
+                    // Reset counter, append count and unique character to run-length encoding string.
                     iterated.Append(count);
                     iterated.Append(unique);
                     count = 1;

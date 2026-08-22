@@ -6,37 +6,30 @@
 //      Runtime:    1 ms
 //      Memory:     47.64 MB
 //
-// I simply borrowed from 0031_NextPermutation
-// to solve this problem.
+// I simply borrowed from 0031_NextPermutation to solve this problem.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns all permutation clones after
-    /// <paramref name="nums"/> before going
-    /// back to itself.
+    /// Returns all permutation clones after <paramref name="nums"/> before going back to itself.
     /// </summary>
-    /// <param name="nums">The distinct <see cref="int"/> array to permute.</param>
+    /// <param name="nums">The distinct <see langword="int"/> array to permute.</param>
     /// <returns>The array of permutations.</returns>
     public IList<IList<int>> Permute(int[] nums)
     {
         IList<IList<int>> results = [[.. nums]];
 
-        // Calculate how many permutations there
-        // are for the given number of elements
-        // in nums. It is equal to the factorial
-        // of nums.Length.
+        // Calculate how many permutations there are for the given number of elements in nums. It is
+        // equal to the factorial of nums.Length.
         int numPermutations = 1;
         for (int i = 2; i <= nums.Length; i++)
         {
             numPermutations *= i;
         }
 
-        // Skip the first permutation we have,
-        // which is the original nums array,
-        // which is why i = 1.
+        // Skip the first permutation we have, which is the original nums array, which is why i = 1.
         for (int i = 1; i < numPermutations; i++)
         {
             NextPermutation();

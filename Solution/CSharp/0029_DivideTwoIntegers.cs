@@ -6,22 +6,17 @@
 //      Runtime:    1232 ms
 //      Memory:     29.59 MB
 //
-// TODO: Make this code more efficient
-// using bitwise operations.
+// TODO: Make this code more efficient using bitwise operations.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns the <see cref="int"/> quotient of
-    /// <c><paramref name="dividend"/> /
-    /// <paramref name="divisor"/></c>.
+    /// Returns the <see langword="int"/> quotient of the <paramref name="dividend"/> over the
+    /// <paramref name="divisor"/>, without using <see langword="int"/> division, multiplication, or
+    /// modulo operations.
     /// </summary>
-    /// <remarks>
-    /// This method does not use the <see cref="int"/>
-    /// division, multiplication, or modulus operations.
-    /// </remarks>
     /// <param name="dividend">The numerator.</param>
     /// <param name="divisor">The denominator. Must not equal 0.</param>
     /// <returns>The quotient.</returns>
@@ -34,19 +29,13 @@ public partial class Solution
         }
         else if (divisor == -1)
         {
-            // int.MinValue cannot be turned
-            // into a positive number as it
-            // makes it greater than int.MaxValue,
-            // so clamp it.
+            // int.MinValue cannot be turned into a positive number as it makes it greater than
+            // int.MaxValue, so clamp it.
             return dividend == int.MinValue ? int.MaxValue : -dividend;
         }
 
-        // Make both dividend and divisor
-        // negative and preserve the sign
-        // result. This is because the
-        // negative integers contains one
-        // number larger than the positive
-        // ones, which is int.MinValue
+        // Make both dividend and divisor negative and preserve the sign result. This is because the
+        // negative integers contain one number larger than the positive ones, which is int.MinValue
         // compared to int.MaxValue.
         int sign = 1;
         if (dividend > 0)
@@ -69,9 +58,7 @@ public partial class Solution
 
         int result = 0;
         int whole = divisor;
-        // Stop while loop if it ever
-        // reaches an integer underflow,
-        // which makes a number positive.
+        // Stop while loop if it ever reaches an integer underflow, which makes a number positive.
         while (whole >= dividend && whole < 0)
         {
             whole += divisor;
@@ -80,8 +67,7 @@ public partial class Solution
 
         if (sign > 0)
         {
-            // Ditto to the negative identity
-            // divisor check.
+            // Ditto to the negative identity divisor check.
             return result == int.MinValue ? int.MaxValue : -result;
         }
         else

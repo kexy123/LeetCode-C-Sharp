@@ -11,15 +11,13 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Swaps every pair in the <see cref="ListNode"/>
-    /// starting at <paramref name="head"/>.
+    /// Swaps every pair in the <see cref="ListNode"/> starting at <paramref name="head"/>.
     /// </summary>
     /// <param name="head">The root <see cref="ListNode"/>.</param>
     /// <returns>The new <see cref="ListNode"/>.</returns>
     public ListNode? SwapPairs(ListNode? head)
     {
-        // If no ListNode is given, simply
-        // return itself.
+        // If no ListNode is given, simply return itself.
         if (head is null)
         {
             return head;
@@ -28,8 +26,7 @@ public partial class Solution
         ListNode top = new(next: head);
         ListNode? root = top;
 
-        // Check if the root contains the
-        // next two ListNodes.
+        // Check if the root contains the next two ListNodes.
         while (root is not null && root.next is ListNode temp && temp.next is ListNode temp2)
         {
             // Visual demonstration:

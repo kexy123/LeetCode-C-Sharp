@@ -11,11 +11,10 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Removes <see cref="int"/> duplicates from
-    /// <paramref name="nums"/> and shifts all
-    /// elements after it to take their places.
+    /// Removes <see langword="int"/> duplicates from <paramref name="nums"/> and shifts all elements
+    /// after it to take their places.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array to change.</param>
+    /// <param name="nums">The <see langword="int"/> array to change.</param>
     /// <returns>How many distinct elements there are.</returns>
     public int RemoveDuplicates(int[] nums)
     {
