@@ -23,7 +23,7 @@ public partial class Solution
     /// in-place such that each element will only appear
     /// at most twice.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array to remove duplicates from.</param>
+    /// <param name="nums">The <see langword="int"/> array to remove duplicates from.</param>
     /// <returns>The new length of the <paramref name="nums"/> array.</returns>
     public int RemoveDuplicates(int[] nums)
     {

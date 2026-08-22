@@ -14,7 +14,7 @@ public partial class Solution
     /// Computes the sum of the shortest path from the
     /// top to the bottom of the <paramref name="triangle"/>.
     /// </summary>
-    /// <param name="triangle">A triangular <see cref="int"/> array.</param>
+    /// <param name="triangle">A triangular <see langword="int"/> array.</param>
     /// <returns>The sum of the shortest path to get from the top to the bottom.</returns>
     public int MinimumTotal(IList<IList<int>> triangle)
     {

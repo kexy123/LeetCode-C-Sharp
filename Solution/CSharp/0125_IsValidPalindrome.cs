@@ -11,11 +11,11 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if the given <see cref="string"/> <paramref name="s"/>
+    /// Checks if the given <see langword="string"/> <paramref name="s"/>
     /// is a palindrome with case-insensitivity and only accounting
     /// for alphanumeric characters (Latin characters and digits).
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to inspect.</param>
+    /// <param name="s">The <see langword="string"/> to inspect.</param>
     /// <returns><see langword="true"/> if it is a palindrome; otherwise <see langword="false"/>.</returns>
     public bool IsPalindrome(string s)
     {

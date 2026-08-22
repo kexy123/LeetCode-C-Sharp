@@ -15,9 +15,9 @@ public partial class Solution
     /// retaining ascending sorting order given that <paramref name="nums1"/>
     /// has enough space for the elements in <paramref name="nums2"/>.
     /// </summary>
-    /// <param name="nums1">The destination <see cref="int"/> array.</param>
+    /// <param name="nums1">The destination <see langword="int"/> array.</param>
     /// <param name="m">The actual number of elements in <paramref name="nums1"/>.</param>
-    /// <param name="nums2">The source <see cref="int"/> array.</param>
+    /// <param name="nums2">The source <see langword="int"/> array.</param>
     /// <param name="n">The number of elements in <paramref name="nums2"/>.</param>
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {

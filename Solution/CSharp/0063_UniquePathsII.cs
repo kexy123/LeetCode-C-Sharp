@@ -21,7 +21,7 @@ public partial class Solution
     /// top-left to the bottom-right corner given that
     /// you can only move right or down.
     /// </summary>
-    /// <param name="obstacleGrid">The <see cref="int"/> matrix to go over.</param>
+    /// <param name="obstacleGrid">The <see langword="int"/> matrix to go over.</param>
     /// <returns>The number of unique possible paths.</returns>
     public int UniquePathsWithObstacles(int[][] obstacleGrid)
     {

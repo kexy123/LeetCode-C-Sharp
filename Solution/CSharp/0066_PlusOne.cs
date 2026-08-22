@@ -12,9 +12,9 @@ public partial class Solution
 {
     /// <summary>
     /// Increments 1 to the given <paramref name="digits"/>
-    /// <see cref="int"/> array.
+    /// <see langword="int"/> array.
     /// </summary>
-    /// <param name="digits">The <see cref="int"/> digits to affect.</param>
+    /// <param name="digits">The <see langword="int"/> digits to affect.</param>
     /// <returns>The new incremented value.</returns>
     public int[] PlusOne(int[] digits)
     {

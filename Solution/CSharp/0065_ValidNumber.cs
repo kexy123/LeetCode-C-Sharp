@@ -11,7 +11,7 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if the given <see cref="string"/>
+    /// Checks if the given <see langword="string"/>
     /// <paramref name="s"/> is a valid number.
     /// <para>
     /// A number is defined as an integer
@@ -36,7 +36,7 @@ public partial class Solution
     /// </item>
     /// </list>
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to inspect.</param>
+    /// <param name="s">The <see langword="string"/> to inspect.</param>
     /// <returns><see langword="true"/> if <paramref name="s"/> is a valid number; otherwise <see langword="false"/>.</returns>
     public bool IsNumber(string s)
     {

@@ -13,7 +13,7 @@ namespace Solution.LeetCodeImplementations;
 public class TreeNode
 {
     /// <summary>
-    /// The <see cref="int"/> value of <see cref="this"/>.
+    /// The <see langword="int"/> value of <see cref="this"/>.
     /// </summary>
     public int val;
 
@@ -33,7 +33,7 @@ public class TreeNode
     /// a <paramref name="left"/> and <paramref name="right"/>
     /// pointer to other <see cref="TreeNode"/>.
     /// </summary>
-    /// <param name="val">An <see cref="int"/> value. Defaults to 0.</param>
+    /// <param name="val">An <see langword="int"/> value. Defaults to 0.</param>
     /// <param name="left">The <see cref="TreeNode"/> on the left.</param>
     /// <param name="right">The <see cref="TreeNode"/> on the right.</param>
     public TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
@@ -44,7 +44,7 @@ public class TreeNode
     }
 
     /// <summary>
-    /// Converts the given <see cref="int"/> array
+    /// Converts the given <see langword="int"/> array
     /// <paramref name="tree"/> into a binary
     /// <see cref="TreeNode"/>, with <see cref="null"/>
     /// values preventing the creation of
@@ -54,7 +54,7 @@ public class TreeNode
     /// This should only be used for debugging and
     /// unit-testing purposes.
     /// </remarks>
-    /// <param name="tree">The <see cref="int"/> array.</param>
+    /// <param name="tree">The <see langword="int"/> array.</param>
     public TreeNode(int?[] tree)
     {
         val = (int)tree[0]!;

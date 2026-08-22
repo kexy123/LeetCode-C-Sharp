@@ -19,9 +19,9 @@ public partial class Solution
     /// algorithm:
     /// <list type="number">
     /// <item>
-    /// Split the given <see cref="string"/> into two
+    /// Split the given <see langword="string"/> into two
     /// nonempty substrings at a random position in
-    /// the string. If the <see cref="string"/> has a
+    /// the string. If the <see langword="string"/> has a
     /// length of 1, simply do nothing.
     /// </item>
     /// <item>
@@ -33,8 +33,8 @@ public partial class Solution
     /// </item>
     /// </list>
     /// </summary>
-    /// <param name="s1">The first <see cref="string"/>.</param>
-    /// <param name="s2">The second <see cref="string"/>.</param>
+    /// <param name="s1">The first <see langword="string"/>.</param>
+    /// <param name="s2">The second <see langword="string"/>.</param>
     /// <returns><see langword="true"/> if they are equal scrambles to each other; otherwise <see langword="false"/>.</returns>
     public bool IsScramble(string s1, string s2)
     {

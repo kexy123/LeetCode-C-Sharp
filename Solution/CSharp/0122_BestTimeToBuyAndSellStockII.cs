@@ -13,7 +13,7 @@ public partial class Solution
     /// <summary>
     /// Computes the maximum profit that can be achieved
     /// by buying then selling stock in the <paramref name="prices"/>
-    /// <see cref="int"/> array, however only being able
+    /// <see langword="int"/> array, however only being able
     /// to hold one stock at a time.
     /// </summary>
     /// <param name="prices">The <see langword="int"/> array that is the stock's value at those days.</param>

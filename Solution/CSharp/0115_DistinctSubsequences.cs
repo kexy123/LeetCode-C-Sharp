@@ -14,12 +14,12 @@ public partial class Solution
     /// Returns the number of distinct subsequences
     /// in <paramref name="s"/> that equal to
     /// <paramref name="t"/>. A subsequence of a
-    /// <see cref="string"/> refers to any sequence
-    /// of characters in the <see cref="string"/>,
+    /// <see langword="string"/> refers to any sequence
+    /// of characters in the <see langword="string"/>,
     /// ignoring gaps.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to find subsequences for.</param>
-    /// <param name="t">The <see cref="string"/> to get subsequences in.</param>
+    /// <param name="s">The <see langword="string"/> to find subsequences for.</param>
+    /// <param name="t">The <see langword="string"/> to get subsequences in.</param>
     /// <returns>The number of distinct subsequences.</returns>
     public int NumDistinct(string s, string t)
     {

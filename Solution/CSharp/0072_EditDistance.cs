@@ -28,8 +28,8 @@ public partial class Solution
     /// <paramref name="word1"/> into
     /// <paramref name="word2"/>.
     /// </summary>
-    /// <param name="word1">The starting <see cref="string"/>.</param>
-    /// <param name="word2">The ending <see cref="string"/>.</param>
+    /// <param name="word1">The starting <see langword="string"/>.</param>
+    /// <param name="word2">The ending <see langword="string"/>.</param>
     /// <returns>The minimum number of operations.</returns>
     public int MinDistance(string word1, string word2)
     {

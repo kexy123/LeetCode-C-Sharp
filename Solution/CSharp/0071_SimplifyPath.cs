@@ -18,7 +18,7 @@ public partial class Solution
     /// <summary>
     /// Simplifies the given directory <paramref name="path"/>.
     /// </summary>
-    /// <param name="path">The directory <see cref="string"/> to simplify.</param>
+    /// <param name="path">The directory <see langword="string"/> to simplify.</param>
     /// <returns>The simplified result.</returns>
     public string SimplifyPath(string path)
     {

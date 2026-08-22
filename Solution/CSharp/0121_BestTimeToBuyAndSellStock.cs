@@ -13,7 +13,7 @@ public partial class Solution
     /// <summary>
     /// Computes the maximum profit that can be achieved
     /// by buying then selling stock between two different
-    /// days from the <paramref name="prices"/> <see cref="int"/>
+    /// days from the <paramref name="prices"/> <see langword="int"/>
     /// array.
     /// </summary>
     /// <param name="prices">The <see langword="int"/> array that is the stock's value at those days.</param>

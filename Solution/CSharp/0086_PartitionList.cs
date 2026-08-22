@@ -18,7 +18,7 @@ public partial class Solution
     /// while keeping their relative order.
     /// </summary>
     /// <param name="head">The start of the linked <see cref="ListNode"/>.</param>
-    /// <param name="x">The given <see cref="int"/> for partitioning.</param>
+    /// <param name="x">The given <see langword="int"/> for partitioning.</param>
     /// <returns>The starting <see cref="ListNode"/>.</returns>
     public ListNode? Partition(ListNode? head, int x)
     {

@@ -16,7 +16,7 @@ public partial class Solution
     /// given that you can only move right
     /// or down.
     /// </summary>
-    /// <param name="grid">The <see cref="int"/> matrix to observe.</param>
+    /// <param name="grid">The <see langword="int"/> matrix to observe.</param>
     /// <returns>The lowest sum of the possible path.</returns>
     public int MinPathSum(int[][] grid)
     {

@@ -22,7 +22,7 @@ public partial class Solution
     /// forward by the value of the current
     /// element it is on.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array to check.</param>
+    /// <param name="nums">The <see langword="int"/> array to check.</param>
     /// <returns><see langword="true"/> if it can reach the end; otherwise <see langword="false"/>.</returns>
     public bool CanJump(int[] nums)
     {

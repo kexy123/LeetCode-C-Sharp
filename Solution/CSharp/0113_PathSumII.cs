@@ -20,7 +20,7 @@ public partial class Solution
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <param name="targetSum">The target sum.</param>
-    /// <returns>An <see cref="IList{T}"/> containing paths of <see cref="int"/> whose sum adds to the <paramref name="targetSum"/>.</returns>
+    /// <returns>An <see cref="IList{T}"/> containing paths of <see langword="int"/> whose sum adds to the <paramref name="targetSum"/>.</returns>
     public IList<IList<int>> PathSum(TreeNode? root, int targetSum)
     {
         IList<IList<int>> paths = [];

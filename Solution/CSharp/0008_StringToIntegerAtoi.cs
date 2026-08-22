@@ -16,7 +16,7 @@ public partial class Solution
     /// decimal point, and invalid sign operation placement. The number is clamped from
     /// <see cref="int.MinValue"/> to <see cref="int.MaxValue"/>.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to convert.</param>
+    /// <param name="s">The <see langword="string"/> to convert.</param>
     /// <returns>The integer returned.</returns>
     public int MyAtoi(string s)
     {

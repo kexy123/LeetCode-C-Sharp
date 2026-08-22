@@ -14,10 +14,10 @@ public partial class Solution
     /// Builds a binary tree from the given
     /// <paramref name="inorder"/> and
     /// <paramref name="preorder"/> traversal
-    /// <see cref="int"/> arrays.
+    /// <see langword="int"/> arrays.
     /// </summary>
-    /// <param name="preorder">The preorder <see cref="int"/> array.</param>
-    /// <param name="inorder">The inorder <see cref="int"/> array.</param>
+    /// <param name="preorder">The preorder <see langword="int"/> array.</param>
+    /// <param name="inorder">The inorder <see langword="int"/> array.</param>
     /// <returns>The starting <see cref="TreeNode"/> of the binary tree.</returns>
     public TreeNode BuildTree(int[] preorder, int[] inorder)
     {

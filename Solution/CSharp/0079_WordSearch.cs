@@ -12,14 +12,14 @@ public partial class Solution
 {
     /// <summary>
     /// Checks if the given <paramref name="word"/>
-    /// exists in the <see cref="char"/> matrix array
+    /// exists in the <see langword="char"/> matrix array
     /// <paramref name="board"/>, given that you
     /// can move in all four cardinal directions at
     /// any point to search for <paramref name="word"/>,
     /// but cannot go use the same cell.
     /// </summary>
-    /// <param name="board">The <see cref="char"/> matrix array to search in.</param>
-    /// <param name="word">The <see cref="string"/> to search for.</param>
+    /// <param name="board">The <see langword="char"/> matrix array to search in.</param>
+    /// <param name="word">The <see langword="string"/> to search for.</param>
     /// <returns><see langword="true"/> if it exists in <paramref name="board"/>; otherwise <see langword="false"/>.</returns>
     public bool Exist(char[][] board, string word)
     {

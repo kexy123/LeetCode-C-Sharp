@@ -19,13 +19,13 @@ public partial class Solution
 {
     /// <summary>
     /// Checks if the <paramref name="target"/> exists
-    /// in the sorted <see cref="int"/> array
+    /// in the sorted <see langword="int"/> array
     /// <paramref name="nums"/> where the array
     /// is/is not right-rotated by an unknown amount
     /// and can contain duplicates.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array to search through.</param>
-    /// <param name="target">The target <see cref="int"/> to find.</param>
+    /// <param name="nums">The <see langword="int"/> array to search through.</param>
+    /// <param name="target">The target <see langword="int"/> to find.</param>
     /// <returns><see langword="true"/> if it does exist in <paramref name="nums"/>; otherwise <see langword="false"/>.</returns>
     public bool Search(int[] nums, int target)
     {

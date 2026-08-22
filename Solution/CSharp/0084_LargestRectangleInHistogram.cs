@@ -18,12 +18,12 @@ public partial class Solution
     /// <summary>
     /// Computes the area of the largest rectangle
     /// that can fit within the columns of the
-    /// <see cref="int"/> array <paramref name="heights"/>
+    /// <see langword="int"/> array <paramref name="heights"/>
     /// if it was arranged as a histogram where
     /// the values represented the heights of each
     /// unit column.
     /// </summary>
-    /// <param name="heights">The <see cref="int"/> array of column heights.</param>
+    /// <param name="heights">The <see langword="int"/> array of column heights.</param>
     /// <returns>The area of the largest rectangle.</returns>
     public int LargestRectangleArea(int[] heights)
     {

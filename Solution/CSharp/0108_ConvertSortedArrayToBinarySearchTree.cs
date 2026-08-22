@@ -12,12 +12,12 @@ public partial class Solution
 {
     /// <summary>
     /// Builds a height-balanced binary search tree
-    /// from the given sorted <see cref="int"/> array
+    /// from the given sorted <see langword="int"/> array
     /// <paramref name="nums"/> where the subtrees of
     /// every <see cref="TreeNode"/> in the tree have
     /// a max depth that differ by at most one.
     /// </summary>
-    /// <param name="nums">The sorted <see cref="int"/> array.</param>
+    /// <param name="nums">The sorted <see langword="int"/> array.</param>
     /// <returns>The starting <see cref="TreeNode"/>.</returns>
     public TreeNode SortedArrayToBST(int[] nums)
     {

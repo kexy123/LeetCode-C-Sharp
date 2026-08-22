@@ -25,7 +25,7 @@ public partial class Solution
     /// formed in a contiguous subarray of
     /// the <paramref name="nums"/> array.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array to inspect.</param>
+    /// <param name="nums">The <see langword="int"/> array to inspect.</param>
     /// <returns>The largest possible sum in a subarray of <paramref name="nums"/>.</returns>
     public int MaxSubArray(int[] nums)
     {

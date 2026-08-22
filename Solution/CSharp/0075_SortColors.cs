@@ -27,7 +27,7 @@ public partial class Solution
     /// in the <paramref name="nums"/> array
     /// in ascending order.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array of colors to order.</param>
+    /// <param name="nums">The <see langword="int"/> array of colors to order.</param>
     /// <exception cref="NotImplementedException"/>
     public void SortColors(int[] nums)
     {

@@ -19,14 +19,14 @@ public partial class Solution
 {
     /// <summary>
     /// Computes the number of ways to decode a
-    /// non-delimited <see cref="string"/>
+    /// non-delimited <see langword="string"/>
     /// <paramref name="s"/> of base-10 digits
     /// where the numbers 1 to 26 are assigned
     /// to the letters of the English alphabet
     /// (A = 1, B = 2, ..., Z = 26).
     /// </summary>
-    /// <param name="s">A non-delimited <see cref="string"/> of digits.</param>
-    /// <returns>The number of ways to decode the ambiguous <see cref="string"/> <paramref name="s"/>.</returns>
+    /// <param name="s">A non-delimited <see langword="string"/> of digits.</param>
+    /// <returns>The number of ways to decode the ambiguous <see langword="string"/> <paramref name="s"/>.</returns>
     public int NumDecodings(string s)
     {
         int a = 1, b = 1, c;

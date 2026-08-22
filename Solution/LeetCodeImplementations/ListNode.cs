@@ -12,7 +12,7 @@ namespace Solution.LeetCodeImplementations;
 public class ListNode
 {
     /// <summary>
-    /// The <see cref="int"/> value of <see cref="this"/>.
+    /// The <see langword="int"/> value of <see cref="this"/>.
     /// </summary>
     public int val;
 
@@ -27,7 +27,7 @@ public class ListNode
     /// optional <paramref name="next"/> that points to
     /// the next <see cref="ListNode"/>.
     /// </summary>
-    /// <param name="val">An <see cref="int"/> value. Defaults to 0.</param>
+    /// <param name="val">An <see langword="int"/> value. Defaults to 0.</param>
     /// <param name="next">The next <see cref="ListNode"/> to point to.</param>
     public ListNode(int val = 0, ListNode? next = null)
     {

@@ -11,12 +11,12 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Adds two binary <see cref="string"/>
+    /// Adds two binary <see langword="string"/>
     /// together.
     /// </summary>
-    /// <param name="a">A binary <see cref="string"/>.</param>
-    /// <param name="b">A binary <see cref="string"/>.</param>
-    /// <returns>The resulting binary <see cref="string"/>.</returns>
+    /// <param name="a">A binary <see langword="string"/>.</param>
+    /// <param name="b">A binary <see langword="string"/>.</param>
+    /// <returns>The resulting binary <see langword="string"/>.</returns>
     public string AddBinary(string a, string b)
     {
         if (b.Length > a.Length)

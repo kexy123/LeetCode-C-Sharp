@@ -17,7 +17,7 @@ public partial class Solution
     /// row is greater than or equal to the ending element
     /// of the previous row.
     /// </summary>
-    /// <param name="matrix">The <see cref="int"/> matrix to search through.</param>
+    /// <param name="matrix">The <see langword="int"/> matrix to search through.</param>
     /// <param name="target">The item.</param>
     /// <returns><see langword="true"/> if <paramref name="target"/> exists in <paramref name="matrix"/>; otherwise <see langword="false"/>.</returns>
     public bool SearchMatrix(int[][] matrix, int target)

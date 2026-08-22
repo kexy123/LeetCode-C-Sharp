@@ -14,7 +14,7 @@ public partial class Solution
     /// Merges all overlapping intervals in
     /// <paramref name="intervals"/>.
     /// </summary>
-    /// <param name="intervals">The array of intervals (a starting and ending <see cref="int"/>) to merge.</param>
+    /// <param name="intervals">The array of intervals (a starting and ending <see langword="int"/>) to merge.</param>
     /// <returns>The merged intervals.</returns>
     public int[][] Merge(int[][] intervals)
     {

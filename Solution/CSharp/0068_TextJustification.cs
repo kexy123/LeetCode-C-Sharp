@@ -12,7 +12,7 @@ public partial class Solution
 {
     /// <summary>
     /// Returns an <see cref="IList{T}"/> of
-    /// <see cref="string"/> that fully justifies
+    /// <see langword="string"/> that fully justifies
     /// the given <paramref name="words"/>,
     /// left-aligning single-words and the
     /// last line formed. Each word in each
@@ -20,9 +20,9 @@ public partial class Solution
     /// number of spaces, otherwise an extra
     /// space is added to the leftmost words.
     /// </summary>
-    /// <param name="words">An array of <see cref="string"/> to concatenate.</param>
-    /// <param name="maxWidth">The <see cref="int"/> width of the lines.</param>
-    /// <returns>The <see cref="IList{T}"/> of <see cref="string"/>.</returns>
+    /// <param name="words">An array of <see langword="string"/> to concatenate.</param>
+    /// <param name="maxWidth">The <see langword="int"/> width of the lines.</param>
+    /// <returns>The <see cref="IList{T}"/> of <see langword="string"/>.</returns>
     public IList<string> FullJustify(string[] words, int maxWidth)
     {
         IList<string> results = [];

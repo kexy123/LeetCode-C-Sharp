@@ -26,11 +26,11 @@ public partial class Solution
 {
     /// <summary>
     /// Zeroes out all rows and columns
-    /// of the given <see cref="int"/>
+    /// of the given <see langword="int"/>
     /// <paramref name="matrix"/> that
     /// contains a zero.
     /// </summary>
-    /// <param name="matrix">The <see cref="int"/> matrix to zero out.</param>
+    /// <param name="matrix">The <see langword="int"/> matrix to zero out.</param>
     public void SetZeroes(int[][] matrix)
     {
         int width = matrix[0].Length;

@@ -14,7 +14,7 @@ public partial class Solution
     /// Gets the length of the last valid
     /// word in <paramref name="s"/>.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to search.</param>
+    /// <param name="s">The <see langword="string"/> to search.</param>
     /// <returns>The length of the last word.</returns>
     public int LengthOfLastWord(string s)
     {

@@ -22,11 +22,11 @@ public partial class Solution
     /// <summary>
     /// Computes the square root of
     /// <paramref name="x"/> rounded down
-    /// to the nearest <see cref="int"/>,
+    /// to the nearest <see langword="int"/>,
     /// given that <paramref name="x"/> is
     /// positive.
     /// </summary>
-    /// <param name="x">A positive <see cref="int"/>.</param>
+    /// <param name="x">A positive <see langword="int"/>.</param>
     /// <returns>The square root of <paramref name="x"/>.</returns>
     public int MySqrt(int x)
     {

@@ -11,11 +11,11 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="int"/> array of the
+    /// Returns an <see langword="int"/> array of the
     /// outward-in clockwise spiral that would be
     /// formed from the given <paramref name="matrix"/>.
     /// </summary>
-    /// <param name="matrix">The <see cref="int"/> matrix.</param>
+    /// <param name="matrix">The <see langword="int"/> matrix.</param>
     /// <returns>The spiral transformed to an array.</returns>
     public IList<int> SpiralOrder(int[][] matrix)
     {

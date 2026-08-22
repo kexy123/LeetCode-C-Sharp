@@ -16,10 +16,10 @@ public partial class Solution
 {
     /// <summary>
     /// Finds the area of the largest rectangle in the
-    /// <see cref="char"/> <paramref name="matrix"/>
+    /// <see langword="char"/> <paramref name="matrix"/>
     /// of zeroes and ones that only consists of ones.
     /// </summary>
-    /// <param name="matrix">The <see cref="char"/> matrix of zeroes and ones.</param>
+    /// <param name="matrix">The <see langword="char"/> matrix of zeroes and ones.</param>
     /// <returns>The largest area in the <paramref name="matrix"/> that consists of only ones.</returns>
     public int MaximalRectangle(char[][] matrix)
     {

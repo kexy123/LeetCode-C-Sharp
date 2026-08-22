@@ -19,11 +19,11 @@ public partial class Solution
     /// <summary>
     /// Returns an <see cref="IList{T}"/> of all unique
     /// subsets in the <paramref name="nums"/> 
-    /// <see cref="int"/> array that might contain
+    /// <see langword="int"/> array that might contain
     /// duplicates, given that the duplicate items do
     /// not discount each other in the subsets.
     /// </summary>
-    /// <param name="nums">The <see cref="int"/> array.</param>
+    /// <param name="nums">The <see langword="int"/> array.</param>
     /// <returns>All unique subsets of <paramref name="nums"/>.</returns>
     public IList<IList<int>> SubsetsWithDup(int[] nums)
     {

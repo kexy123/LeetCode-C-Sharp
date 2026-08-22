@@ -16,9 +16,9 @@ public partial class Solution
     /// <summary>
     /// Returns an <see cref="IList{T}"/> of all unique
     /// subsets in the distinct <paramref name="nums"/>
-    /// <see cref="int"/> array.
+    /// <see langword="int"/> array.
     /// </summary>
-    /// <param name="nums">The distinct <see cref="int"/> array.</param>
+    /// <param name="nums">The distinct <see langword="int"/> array.</param>
     /// <returns>All unique subsets of the <paramref name="nums"/> array.</returns>
     public IList<IList<int>> Subsets(int[] nums)
     {

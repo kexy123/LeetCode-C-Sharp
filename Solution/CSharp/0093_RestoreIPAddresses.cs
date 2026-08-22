@@ -13,10 +13,10 @@ public partial class Solution
     /// <summary>
     /// Returns an <see cref="IList{T}"/> of all possible
     /// <see href="https://en.wikipedia.org/wiki/IPv4">IPv4</see>
-    /// addresses from the given <see cref="string"/> of
+    /// addresses from the given <see langword="string"/> of
     /// digits <paramref name="s"/>.
     /// </summary>
-    /// <param name="s">A <see cref="string"/> of base-10 digits.</param>
+    /// <param name="s">A <see langword="string"/> of base-10 digits.</param>
     /// <returns>An <see cref="IList{T}"/> of all possible addresses.</returns>
     public IList<string> RestoreIpAddresses(string s)
     {

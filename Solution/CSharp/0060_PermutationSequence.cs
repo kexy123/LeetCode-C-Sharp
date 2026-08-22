@@ -17,7 +17,7 @@ public partial class Solution
 {
     /// <summary>
     /// Gets the <paramref name="k"/>th
-    /// permutation from an <see cref="int"/>
+    /// permutation from an <see langword="int"/>
     /// array of <paramref name="n"/> elements
     /// beginning as the sorted form.
     /// </summary>

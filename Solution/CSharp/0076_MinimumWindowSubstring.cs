@@ -15,9 +15,9 @@ public partial class Solution
     /// <paramref name="s"/> that contains all
     /// the characters in <paramref name="t"/>.
     /// </summary>
-    /// <param name="s">The <see cref="string"/> to search through.</param>
+    /// <param name="s">The <see langword="string"/> to search through.</param>
     /// <param name="t">The characters to contain. Can contain duplicates which are considered.</param>
-    /// <returns>The shortest substring. If no substring was found, returns an empty <see cref="string"/>.</returns>
+    /// <returns>The shortest substring. If no substring was found, returns an empty <see langword="string"/>.</returns>
     public string MinWindow(string s, string t)
     {
         // Prepare a frequency table counting

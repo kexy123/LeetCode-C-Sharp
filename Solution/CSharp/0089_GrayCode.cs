@@ -16,15 +16,15 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns a valid sequence of unique <see cref="int"/>
+    /// Returns a valid sequence of unique <see langword="int"/>
     /// values from 0 to 2^<paramref name="n"/> - 1 where
     /// every adjacent number in its binary representation
     /// differs by one bit. This also includes the difference
     /// between the start and end of the sequence, and this
     /// sequence always starts at 0.
     /// </summary>
-    /// <param name="n">A <see cref="int"/> that represents a power of two of the number of values in the sequence.</param>
-    /// <returns>A valid distinct <see cref="int"/> sequence.</returns>
+    /// <param name="n">A <see langword="int"/> that represents a power of two of the number of values in the sequence.</param>
+    /// <returns>A valid distinct <see langword="int"/> sequence.</returns>
     public IList<int> GrayCode(int n)
     {
         // Prepare the sequence array.

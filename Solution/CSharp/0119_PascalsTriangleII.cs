@@ -14,7 +14,7 @@ public partial class Solution
     /// Gets the row of Pascal's triangle.
     /// </summary>
     /// <param name="rowIndex">The row of Pascal's triangle to get.</param>
-    /// <returns>The <see cref="int"/> array.</returns>
+    /// <returns>The <see langword="int"/> array.</returns>
     public IList<int> GetRow(int rowIndex)
     {
         // Set all elements in the row to 1.

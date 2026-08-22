@@ -16,7 +16,7 @@ public partial class Solution
 {
     /// <summary>
     /// Builds a height-balanced binary search tree
-    /// from the given sorted <see cref="int"/> linked
+    /// from the given sorted <see langword="int"/> linked
     /// <see cref="ListNode"/> <paramref name="nums"/>
     /// where the subtrees of every <see cref="TreeNode"/>
     /// in the tree have a max depth that differ by at
