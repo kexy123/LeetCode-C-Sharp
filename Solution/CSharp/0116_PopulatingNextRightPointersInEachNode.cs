@@ -18,7 +18,7 @@ public partial class Solution
     /// Connects the <see cref="Node.next"/> of all
     /// <see cref="Node"/> in a balanced binary tree
     /// to the <see cref="Node"/> right next to it,
-    /// otherwise <see cref="null"/> if not possible.
+    /// otherwise <see langword="null"/> if not possible.
     /// </summary>
     /// <param name="root">The starting <see cref="Node"/>.</param>
     /// <returns>The <paramref name="root"/>.</returns>
