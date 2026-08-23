@@ -8,7 +8,7 @@
 //
 // Looked up an O(n) solution, but I created an explanation to the solution's bit manipulation.
 
-namespace Solution.CSharp;
+namespace Solution.CSharp.SingleNumberII_0137;
 
 public partial class Solution
 {
