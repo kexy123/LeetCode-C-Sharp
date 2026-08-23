@@ -3,11 +3,9 @@
 namespace Solution.LeetCodeImplementations;
 
 /// <summary>
-/// Simplified definition of <see cref="TreeNode"/>
-/// in 0094_BinaryTreeInorderReversal and other problems:
-/// a binary tree node that points to two other
-/// <see cref="TreeNode"/> from its <see cref="left"/>
-/// and <see cref="right"/> and stores a value.
+/// Simplified definition of <see cref="TreeNode"/> in 0094_BinaryTreeInorderReversal and other
+/// problems: a binary tree node that points to two other <see cref="TreeNode"/> from its
+/// <see cref="left"/> and <see cref="right"/> and stores a value.
 /// </summary>
 [DebuggerDisplay("{ToString(),nq}")]
 public class TreeNode
@@ -28,10 +26,8 @@ public class TreeNode
     public TreeNode right;
 
     /// <summary>
-    /// Creates a <see cref="TreeNode"/> instance with
-    /// a <paramref name="val"/> (defaults to 0) and
-    /// a <paramref name="left"/> and <paramref name="right"/>
-    /// pointer to other <see cref="TreeNode"/>.
+    /// Creates a <see cref="TreeNode"/> instance with a <paramref name="val"/> (defaults to 0) and a
+    /// <paramref name="left"/> and <paramref name="right"/> pointer to other <see cref="TreeNode"/>.
     /// </summary>
     /// <param name="val">An <see langword="int"/> value. Defaults to 0.</param>
     /// <param name="left">The <see cref="TreeNode"/> on the left.</param>
@@ -44,10 +40,8 @@ public class TreeNode
     }
 
     /// <summary>
-    /// Converts the given <see langword="int"/> array
-    /// <paramref name="tree"/> into a binary
-    /// <see cref="TreeNode"/>, with <see cref="null"/>
-    /// values preventing the creation of
+    /// Converts the given <see langword="int"/> array <paramref name="tree"/> into a binary
+    /// <see cref="TreeNode"/>, with <see langword="null"/> values preventing the creation of
     /// <see cref="TreeNode"/> instances.
     /// </summary>
     /// <remarks>
@@ -61,9 +55,7 @@ public class TreeNode
         left = null!;
         right = null!;
 
-        // Store the node and which direction to
-        // add the new node in (false = left,
-        // true = right).
+        // Store the node and which direction to add the new node in (false = left, true = right).
         Queue<(TreeNode node, bool direction)> queue = [];
         queue.Enqueue((this, false));
         queue.Enqueue((this, true));

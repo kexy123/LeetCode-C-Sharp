@@ -1,14 +1,10 @@
 ﻿namespace Solution.LeetCodeImplementations;
 
 /// <summary>
-/// Simplified definition of <see cref="Node"/>
-/// in 0116_PopulatingNextRightPointersInEachNode
-/// and other problems: a binary tree node that
-/// points to two other <see cref="Node"/> from
-/// its <see cref="left/> and <see cref="right"/>,
-/// stores a value and points to the <see cref="next"/>
-/// <see cref="Node"/>. This is a mix of both the
-/// <see cref="TreeNode"/> and the <see cref="ListNode"/>.
+/// Simplified definition of <see cref="Node"/> in 0116_PopulatingNextRightPointersInEachNode and other
+/// problems: a binary tree node that points to two other <see cref="Node"/> from its <see cref="left/>
+/// and <see cref="right"/>, stores a value and points to the <see cref="next"/> <see cref="Node"/>.
+/// This is a mix of both the <see cref="TreeNode"/> and the <see cref="ListNode"/>.
 /// </summary>
 public class Node
 {
@@ -33,10 +29,8 @@ public class Node
     public Node next;
 
     /// <summary>
-    /// Creates a <see cref="Node"/> instance with
-    /// a <paramref name="val"/> (defaults to 0) and
-    /// a <paramref name="left"/>, a <paramref name="right"/>,
-    /// and a <paramref name="next"/> pointer to
+    /// Creates a <see cref="Node"/> instance with a <paramref name="val"/> (defaults to 0) and a
+    /// <paramref name="left"/>, a <paramref name="right"/>, and a <paramref name="next"/> pointer to
     /// other <see cref="Node"/>.
     /// </summary>
     /// <param name="val">An <see langword="int"/> value. Defaults to 0.</param>

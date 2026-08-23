@@ -3,10 +3,8 @@
 namespace Solution.LeetCodeImplementations;
 
 /// <summary>
-/// Simplified definition of <see cref="ListNode"/>
-/// in 0002_AddTwoNumbers and other problems: stores
-/// a base-10 digit and a pointer to another
-/// <see cref="ListNode"/>.
+/// Simplified definition of <see cref="ListNode"/> in 0002_AddTwoNumbers and other problems: stores a
+/// base-10 digit and a pointer to another <see cref="ListNode"/>.
 /// </summary>
 [DebuggerDisplay("{ToString(),nq}")]
 public class ListNode
@@ -22,10 +20,8 @@ public class ListNode
     public ListNode next;
 
     /// <summary>
-    /// Creates a <see cref="ListNode"/> instance with
-    /// a <paramref name="val"/> (defaults to 0) and an
-    /// optional <paramref name="next"/> that points to
-    /// the next <see cref="ListNode"/>.
+    /// Creates a <see cref="ListNode"/> instance with a <paramref name="val"/> (defaults to 0) and an
+    /// optional <paramref name="next"/> that points to the next <see cref="ListNode"/>.
     /// </summary>
     /// <param name="val">An <see langword="int"/> value. Defaults to 0.</param>
     /// <param name="next">The next <see cref="ListNode"/> to point to.</param>
@@ -36,14 +32,11 @@ public class ListNode
     }
 
     /// <summary>
-    /// Creates a chained <see cref="ListNode"/> from
-    /// the given <see cref="IList{T}"/> collection
-    /// <paramref name="values"/> and yields the starting
-    /// element.
+    /// Creates a chained <see cref="ListNode"/> from the given <see cref="IList{T}"/> collection
+    /// <paramref name="values"/> and yields the starting element.
     /// </summary>
     /// <remarks>
-    /// This should only be used for debugging and
-    /// unit-testing purposes.
+    /// This should only be used for debugging and unit-testing purposes.
     /// </remarks>
     /// <param name="values">The <see cref="IList{T}"/> collection.</param>
     public ListNode(IList<int> values)
@@ -61,8 +54,7 @@ public class ListNode
 
 
     /// <summary>
-    /// Determines if <see cref="this"/> is part of a
-    /// cyclic linked <see cref="ListNode"/>. If it is,
+    /// Determines if <see cref="this"/> is part of a cyclic linked <see cref="ListNode"/>. If it is,
     /// find the starting point of the cycle.
     /// </summary>
     /// <returns>The starting point of the cycle. <see langword="null"/> if not in a cycle.</returns>
