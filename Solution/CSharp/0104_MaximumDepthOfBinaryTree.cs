@@ -24,7 +24,7 @@ public partial class Solution
         return maxDepth;
 
 
-        // Traverses through the list pre-order
+        // Traverses through the list preorder
         // and finds the deepest level.
         void Traverse(TreeNode? node, int depth)
         {

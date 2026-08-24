@@ -44,7 +44,7 @@ public partial class Solution
                 if (lastRight is null)
                 {
                     // The entire binary tree is in
-                    // pre-order traversal, so break early.
+                    // preorder traversal, so break early.
                     break;
                 }
 
