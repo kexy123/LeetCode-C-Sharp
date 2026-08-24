@@ -98,7 +98,7 @@ public class ListNode
 
         if (cyclicStart is not null && current == cyclicStart)
         {
-            list.Add("!!!CYCLE!!!");
+            list.Add($"!!!CYCLE!!! ({cyclicStart.val})");
         }
 
         return $"[{string.Join(", ", list)}]";
