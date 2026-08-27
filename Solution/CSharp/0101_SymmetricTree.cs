@@ -11,9 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if a <see cref="TreeNode"/> is symmetric;
-    /// the structure and values of its left subtree are
-    /// a perfect mirror to its right subtree.
+    /// Checks if a <see cref="TreeNode"/> is symmetric; the structure and values of its left subtree
+    /// are a perfect mirror to its right subtree.
     /// </summary>
     /// <param name="root">The root <see cref="ListNode"/>.</param>
     /// <returns><see langword="true"/> if <paramref name="root"/> is symmetrical; otherwise <see langword="false"/>.</returns>
@@ -22,9 +21,7 @@ public partial class Solution
         return Compare(root.left, root.right);
 
 
-        // Checks if the structure and values of
-        // the left node is symmetrical to the
-        // right node.
+        // Checks if the structure and values of the left node is symmetrical to the right node.
         static bool Compare(TreeNode? left, TreeNode? right)
         {
             if (left is null)
@@ -42,8 +39,8 @@ public partial class Solution
                 return false;
             }
 
-            // Compare the left of left with the right of right
-            // and the right of left with the left of right.
+            // Compare the left of left with the right of right and the right of left with the left
+            // of right.
             return Compare(left.left, right.right)
                 && Compare(left.right, right.left);
         }

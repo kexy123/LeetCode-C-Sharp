@@ -6,21 +6,18 @@
 //      Runtime:    0 ms
 //      Memory:     46.60 MB
 //
-// Directly borrowed from 0102_BinaryTreeLevelOrderTraversal,
-// just with a tracked current level and check to reverse
-// the array indices or not.
+// Directly borrowed from 0102_BinaryTreeLevelOrderTraversal, just with a tracked current level and
+// check to reverse the array indices or not.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="IList{T}"/> of levels that
-    /// refer to the value of the <see cref="TreeNode"/>
-    /// at those levels from the top (the <paramref name="root"/>)
-    /// to the bottom. However, it is traversed in a
-    /// zigzag pattern; the first level is left-to-right,
-    /// then the second level is right-to-left, etc.
+    /// Returns an <see cref="IList{T}"/> of levels that refer to the value of the
+    /// <see cref="TreeNode"/> at those levels from the top (the <paramref name="root"/>) to the
+    /// bottom. However, it is traversed in a zigzag pattern; the first level is left-to-right, then
+    /// the second level is right-to-left, etc.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <returns>The <see cref="IList{T}"/> of levels.</returns>

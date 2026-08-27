@@ -6,18 +6,15 @@
 //      Runtime:    4 ms
 //      Memory:     43.11 MB
 //
-// This solution is solved in-place with O(1) extra
-// memory, although it is slower.
+// This solution is solved in-place with O(1) extra memory, although it is slower.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Transform the given binary tree such that
-    /// traversing the <see cref="TreeNode.right"/>
-    /// will lead to the next element in the preorder
-    /// traversal of the binary tree.
+    /// Transform the given binary tree such that traversing the <see cref="TreeNode.right"/> will lead
+    /// to the next element in the preorder traversal of the binary tree.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     public void Flatten(TreeNode? root)
@@ -34,8 +31,7 @@ public partial class Solution
         {
             if (current.right is not null)
             {
-                // Set lastRight to the last element that
-                // contains a right TreeNode.
+                // Set lastRight to the last element that contains a right TreeNode.
                 lastRight = current;
             }
 
@@ -43,13 +39,11 @@ public partial class Solution
             {
                 if (lastRight is null)
                 {
-                    // The entire binary tree is in
-                    // preorder traversal, so break early.
+                    // The entire binary tree is in preorder traversal, so break early.
                     break;
                 }
 
-                // Move lastRight to current.left and
-                // reset both lastRight and current.
+                // Move lastRight to current.left and reset both lastRight and current.
                 current.left = lastRight.right;
                 lastRight.right = null!;
                 lastRight = null;
@@ -63,8 +57,7 @@ public partial class Solution
             }
         }
 
-        // Mirror the binary tree. Note that the
-        // tree is left-skewed.
+        // Mirror the binary tree. Note that the tree is left-skewed.
         current = root;
         while (current is not null)
         {

@@ -6,18 +6,17 @@
 //      Runtime:    0 ms
 //      Memory:     47.03 MB
 //
-// Directly copied from 0102_BinaryTreeLevelOrderTraversal,
-// just that the elements are inserted in reverse order.
+// Directly copied from 0102_BinaryTreeLevelOrderTraversal, just that the elements are inserted in
+// reverse order.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="IList{T}"/> of levels that
-    /// refer to the value of the <see cref="TreeNode"/>
-    /// at those levels from the top (the <paramref name="root"/>)
-    /// to the bottom.
+    /// Returns an <see cref="IList{T}"/> of levels that refer to the value of the
+    /// <see cref="TreeNode"/> at those levels from the top (the <paramref name="root"/>) to
+    /// the bottom.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <returns>The <see cref="IList{T}"/> of levels.</returns>

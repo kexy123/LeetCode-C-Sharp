@@ -6,18 +6,16 @@
 //      Runtime:    1 ms
 //      Memory:     45.06 MB
 //
-// Directly copied from 0105_ConstructBinaryTreeFromPreorderAndInorderTraversal,
-// but reversed the index direction and checked when it reaches out of bounds.
+// Directly copied from 0105_ConstructBinaryTreeFromPreorderAndInorderTraversal, but reversed the index
+// direction and checked when it reaches out of bounds.
 
 namespace Solution.CSharp.ConstructBinaryTreeFromInorderAndPostorderTraversal_0106;
 
 public partial class Solution
 {
     /// <summary>
-    /// Builds a binary tree from the given
-    /// <paramref name="inorder"/> and
-    /// <paramref name="postorder"/> traversal
-    /// <see langword="int"/> arrays.
+    /// Builds a binary tree from the given <paramref name="inorder"/> and <paramref name="postorder"/>
+    /// traversal <see langword="int"/> arrays.
     /// </summary>
     /// <param name="inorder">The inorder <see langword="int"/> array.</param>
     /// <param name="postorder">The postorder <see langword="int"/> array.</param>

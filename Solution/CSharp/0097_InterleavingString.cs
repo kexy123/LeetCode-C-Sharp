@@ -6,17 +6,15 @@
 //      Runtime:    65 ms
 //      Memory:     40.92 MB
 //
-// TODO: Try to complete the follow-up problem with
-// O(s2.Length) space complexity.
+// TODO: Try to complete the follow-up problem with O(s2.Length) space complexity.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Checks if <paramref name="s3"/> is an interleave of
-    /// the characters in <paramref name="s1"/> and
-    /// <paramref name="s2"/>.
+    /// Checks if <paramref name="s3"/> is an interleave of the characters in <paramref name="s1"/>
+    /// and <paramref name="s2"/>.
     /// </summary>
     /// <param name="s1">The first <see langword="string"/>.</param>
     /// <param name="s2">The second <see langword="string"/>.</param>
@@ -26,8 +24,7 @@ public partial class Solution
     {
         if (s1.Length + s2.Length != s3.Length)
         {
-            // The interleaving of s1 and s2 must produce
-            // a string that is the sum of their lengths.
+            // The interleaving of s1 and s2 must produce a string that is the sum of their lengths.
             return false;
         }
 
@@ -37,8 +34,7 @@ public partial class Solution
         return Interleave(0, 0);
 
 
-        // A recursive function that moves the i1, i2,
-        // and i3 pointers such that it finds a possible
+        // A recursive function that moves the i1, i2, and i3 pointers such that it finds a possible
         // interleaving combination of the two strings.
         bool Interleave(int i1, int i2)
         {
@@ -56,8 +52,7 @@ public partial class Solution
 
                 if (c1 == c3 && c1 == c2)
                 {
-                    // Return if there is a possibility in the
-                    // two interleaved possibilities.
+                    // Return if there is a possibility in the two interleaved possibilities.
                     result = Interleave(i1 + 1, i2) || Interleave(i1, i2 + 1);
                     return (bool)result;
                 }
@@ -73,18 +68,15 @@ public partial class Solution
                 }
                 else
                 {
-                    // No character matches at this point, so
-                    // set the earliest sign of it happening to
-                    // false, which are the starting indices of
-                    // this function.
+                    // No character matches at this point, so set the earliest sign of it happening to
+                    // false, which are the starting indices of this function.
                     result = false;
                     return false;
                 }
             }
 
-            // i1, i2, and i3 have reached the end of
-            // their strings, so return true. This
-            // also terminates the recursive function.
+            // i1, i2, and i3 have reached the end of their strings, so return true. This also
+            // terminates the recursive function.
             return true;
         }
     }

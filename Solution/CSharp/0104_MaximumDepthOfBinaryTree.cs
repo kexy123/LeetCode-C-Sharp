@@ -24,19 +24,16 @@ public partial class Solution
         return maxDepth;
 
 
-        // Traverses through the list preorder
-        // and finds the deepest level.
+        // Traverses through the list preorder and finds the deepest level.
         void Traverse(TreeNode? node, int depth)
         {
             if (node is null)
             {
-                // There is no TreeNode at this level,
-                // so it doesn't count.
+                // There is no TreeNode at this level, so it doesn't count.
                 return;
             }
 
-            // Depth is incremented after the maxDepth
-            // check.
+            // Depth is incremented after the maxDepth check.
             maxDepth = Math.Max(maxDepth, depth++);
 
             Traverse(node.left, depth);

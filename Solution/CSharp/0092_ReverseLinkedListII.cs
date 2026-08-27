@@ -11,11 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Reverses a segment of the linked <see cref="ListNode"/>
-    /// starting at <paramref name="head"/>. The segment is
-    /// from the <paramref name="left"/> to the
-    /// <paramref name="right"/> relative to <paramref name="head"/>.
-    /// Both are 1-indexed.
+    /// Reverses a segment of the linked <see cref="ListNode"/> starting at <paramref name="head"/>.
+    /// The segment is from the <paramref name="left"/> to the <paramref name="right"/> relative to
+    /// <paramref name="head"/>. Both are 1-indexed.
     /// </summary>
     /// <param name="head">The starting <see cref="ListNode"/>.</param>
     /// <param name="left">The start of the segment relative to <paramref name="head"/>. Is 1-indexed.</param>
@@ -25,8 +23,7 @@ public partial class Solution
     {
         ListNode start = new(next: head);
 
-        // Find the start of the segment and
-        // go one node before it.
+        // Find the start of the segment and go one node before it.
         ListNode reverseStart = start;
         for (int i = 0; i < left - 1; i++)
         {
@@ -41,10 +38,8 @@ public partial class Solution
             (temp.next, old, temp) = (old, temp, temp.next);
         }
 
-        // Change reference endpoints of the segment
-        // that was reversed. The start of the segment
-        // points to reverseStart, and reverseStart
-        // points to the end of the segment.
+        // Change reference endpoints of the segment that was reversed. The start of the segment points
+        // to reverseStart, and reverseStart points to the end of the segment.
         reverseStart.next.next = temp;
         reverseStart.next = old;
 

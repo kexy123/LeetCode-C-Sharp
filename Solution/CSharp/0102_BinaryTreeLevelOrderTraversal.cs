@@ -11,10 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="IList{T}"/> of levels that
-    /// refer to the value of the <see cref="TreeNode"/>
-    /// at those levels from the top (the <paramref name="root"/>)
-    /// to the bottom.
+    /// Returns an <see cref="IList{T}"/> of levels that refer to the value of the
+    /// <see cref="TreeNode"/> at those levels from the top (the <paramref name="root"/>) to
+    /// the bottom.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <returns>The <see cref="IList{T}"/> of levels.</returns>
@@ -38,19 +37,15 @@ public partial class Solution
 
             int[] level = new int[length];
 
-            // Loop over all the elements at the
-            // current level, adding their values
-            // to the level list. We additionally
-            // also reuse the queue as we know
-            // exactly how many nodes to dequeue
+            // Loop over all the elements at the current level, adding their values to the level list.
+            // We additionally also reuse the queue as we know exactly how many nodes to dequeue
             // per level.
             for (int i = 0; i < length; i++)
             {
                 TreeNode node = queue.Dequeue();
                 level[i] = node.val;
 
-                // Add child nodes left to right if
-                // they are not null.
+                // Add child nodes left to right if they are not null.
                 if (node.left is TreeNode left)
                 {
                     queue.Enqueue(left);

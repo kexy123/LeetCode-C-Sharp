@@ -6,18 +6,18 @@
 //      Runtime:    1 ms
 //      Memory:     64.04 MB
 //
-// My first attempt for some reason was using a HashSet to store the coordinates of
-// 'O' characters that were not surrounded, and I did not realize that I could simply
-// use the matrix itself to check if a cell should be filled with an 'O' or an 'X'.
+// My first attempt for some reason was using a HashSet to store the coordinates of 'O' characters that
+// were not surrounded, and I did not realize that I could simply use the matrix itself to check if a
+// cell should be filled with an 'O' or an 'X'.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Fills all 'O' character regions surrounded by 'X' in the <paramref name="board"/>. A
-    /// region connects all 'O' characters that are cardinally adjacent to each other, and a
-    /// region is not surrounded if it has 'O' characters that are on the edge of the
+    /// Fills all 'O' character regions surrounded by 'X' in the <paramref name="board"/>. A region
+    /// connects all 'O' characters that are cardinally adjacent to each other, and a region is not
+    /// surrounded if it has 'O' characters that are on the edge of the
     /// <paramref name="board"/>.
     /// </summary>
     /// <param name="board">The <see langword="char"/> matrix to modify.</param>
@@ -34,8 +34,8 @@ public partial class Solution
             ExpandEscaping(rows - 1, i);
         }
 
-        // The left and right of the matrix, not calling ExpandEscaping for the corners as
-        // they have already been visited.
+        // The left and right of the matrix, not calling ExpandEscaping for the corners as they have
+        // already been visited.
         for (int i = 1; i < rows - 1; i++)
         {
             ExpandEscaping(i, 0);
@@ -50,8 +50,8 @@ public partial class Solution
                 switch (cell)
                 {
                     case 'O':
-                        // The cell is an 'O' that is surrounded; its region doesn't touch the
-                        // edges of the matrix.
+                        // The cell is an 'O' that is surrounded; its region doesn't touch the edges of
+                        // the matrix.
                         cell = 'X';
                         break;
                     case 'E':
@@ -63,9 +63,8 @@ public partial class Solution
         }
 
 
-        // A fill algorithm that marks cells that are 'O' as 'E' and checks for adjacent
-        // 'O' characters. This recursive subroutine should be first called at the edges
-        // of the board.
+        // A fill algorithm that marks cells that are 'O' as 'E' and checks for adjacent 'O'
+        // characters. This recursive subroutine should be first called at the edges of the board.
         void ExpandEscaping(int row, int col)
         {
             if (row is < 0 || col is < 0 || row >= rows || col >= columns)

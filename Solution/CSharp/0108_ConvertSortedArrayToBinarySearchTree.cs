@@ -11,11 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Builds a height-balanced binary search tree
-    /// from the given sorted <see langword="int"/> array
-    /// <paramref name="nums"/> where the subtrees of
-    /// every <see cref="TreeNode"/> in the tree have
-    /// a max depth that differ by at most one.
+    /// Builds a height-balanced binary search tree from the given sorted <see langword="int"/> array
+    /// <paramref name="nums"/> where the subtrees of every <see cref="TreeNode"/> in the tree have a
+    /// max depth that differ by at most one.
     /// </summary>
     /// <param name="nums">The sorted <see langword="int"/> array.</param>
     /// <returns>The starting <see cref="TreeNode"/>.</returns>
@@ -28,8 +26,7 @@ public partial class Solution
         return root;
 
 
-        // Builds the TreeNode's subtrees from the range
-        // of the nums array.
+        // Builds the TreeNode's subtrees from the range of the nums array.
         void Build(TreeNode node, int left, int right)
         {
             int mid = left + (right - left >> 1);
@@ -37,10 +34,8 @@ public partial class Solution
 
             if (mid == right)
             {
-                // The mid is the midpoint between left and
-                // right, with ties in favor of the left
-                // pointer. Therefore, if mid == right, then
-                // left == right too, meaning that there are
+                // The mid is the midpoint between left and right, with ties in favor of the left
+                // pointer. Therefore, if mid == right, then left == right too, meaning that there are
                 // no other nodes to branch off to.
                 return;
             }
@@ -49,10 +44,8 @@ public partial class Solution
             node.right = new();
             Build(node.right, mid + 1, right);
 
-            // If mid == left, then left and right are
-            // right next to each other, and since we
-            // already wrote the value for mid, we only
-            // need to branch the right.
+            // If mid == left, then left and right are right next to each other, and since we already
+            // wrote the value for mid, we only need to branch the right.
             if (mid != left)
             {
                 // Otherwise, branch to the left node.

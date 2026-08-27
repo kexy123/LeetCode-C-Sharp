@@ -6,8 +6,7 @@
 //      Runtime:    184 ms
 //      Memory:     56.87 MB
 //
-// Similar to 0126_WordLadderII, but only needs to return the depth of the
-// shortest sequence.
+// Similar to 0126_WordLadderII, but only needs to return the depth of the shortest sequence.
 
 namespace Solution.CSharp;
 
@@ -57,9 +56,8 @@ public partial class Solution
         }
 
 
-        // Breadth-first search can store the depth, which is the same as the
-        // number of words in the sequence as long as we don't visit previous
-        // words.
+        // Breadth-first search can store the depth, which is the same as the number of words in the
+        // sequence as long as we don't visit previous words.
         HashSet<string> visited = [];
         Queue<(string word, int level)> queue = [];
         queue.Enqueue((beginWord, 1));

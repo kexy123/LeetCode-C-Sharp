@@ -6,18 +6,15 @@
 //      Runtime:    23 ms
 //      Memory:     56.16 MB
 //
-// This was an extremely difficult question, and I took a long break
-// from LeetCode because of it as well. I looked up a solution which
-// included a bidirectional breadth-first search algorithm, until I
-// found a more memory-efficient method by creating a custom class
-// for this problem.
+// This was an extremely difficult question, and I took a long break from LeetCode because of it as
+// well. I looked up a solution which included a bidirectional breadth-first search algorithm, until I
+// found a more memory-efficient method by creating a custom class for this problem.
 
 namespace Solution.CSharp;
 
 /// <summary>
-/// A tree node that stores a <see cref="Word"/> and references to other
-/// <see cref="WordNode"/> instances that are the shortest routes to the
-/// starting word.
+/// A tree node that stores a <see cref="Word"/> and references to other <see cref="WordNode"/>
+/// instances that are the shortest routes to the starting word.
 /// </summary>
 file sealed class WordNode
 {
@@ -27,17 +24,16 @@ file sealed class WordNode
     public required string Word;
 
     /// <summary>
-    /// A <see cref="List{T}"/> of the nodes before this <see cref="WordNode"/>
-    /// instance that are the shortest paths to the starting word.
+    /// A <see cref="List{T}"/> of the nodes before this <see cref="WordNode"/> instance that are the
+    /// shortest paths to the starting word.
     /// </summary>
     public List<WordNode> ShortestPaths = [];
 
 
     /// <summary>
-    /// A depth-first search algorithm that traverses through the tree at
-    /// the shortest paths, adding the <paramref name="currentSequence"/>
-    /// to the <paramref name="sequence"/> once it reaches the starting
-    /// <see cref="WordNode"/>.
+    /// A depth-first search algorithm that traverses through the tree at the shortest paths, adding
+    /// the <paramref name="currentSequence"/> to the <paramref name="sequence"/> once it reaches the
+    /// starting <see cref="WordNode"/>.
     /// </summary>
     /// <param name="sequence">The <see cref="IList{T}"/> to add sequences to.</param>
     /// <param name="currentSequence">The <see cref="IList{T}"/> to modify. This should be empty when called at the root.</param>
@@ -47,8 +43,8 @@ file sealed class WordNode
 
         if (ShortestPaths.Count is <= 0)
         {
-            // This is specifically a List<T> and not an IList<T> to prevent
-            // using the IEnumerable<string> extension Reverse().
+            // This is specifically a List<T> and not an IList<T> to prevent using the
+            // IEnumerable<string> extension Reverse().
             List<string> newList = [.. currentSequence];
             newList.Reverse();
 
@@ -70,8 +66,8 @@ public partial class Solution
 {
     /// <summary>
     /// Finds all shortest paths from <paramref name="beginWord"/> to <paramref name="endWord"/>
-    /// following a given <paramref name="wordList"/> such that you can traverse through words
-    /// that differ by exactly one character.
+    /// following a given <paramref name="wordList"/> such that you can traverse through words that
+    /// differ by exactly one character.
     /// </summary>
     /// <param name="beginWord">The starting word.</param>
     /// <param name="endWord">The ending word.</param>
@@ -98,8 +94,7 @@ public partial class Solution
             adjacentWordsGraph[beginWord] = [];
         }
 
-        // Create a network graph of all words that differ by exactly
-        // one character.
+        // Create a network graph of all words that differ by exactly one character.
         for (int i = 0; i < wordList.Count - 1; i++)
         {
             string word = wordList[i];
@@ -129,20 +124,16 @@ public partial class Solution
         //  \      /
         //   - E --
         //
-        // Notice that, to get from A to F, AEDF is shorter than ABCDF. This
-        // is because AE can get to D faster than ABC. In this breadth-first
-        // search algorithm, nodes that are too slow to reach intersections
-        // will be discarded as they are guaranteed to not be one of the
-        // shortest paths. However, ABCF is also as fast as AEDF, because C
-        // and D intersect F at exactly the same node distance, which is
-        // acknowledged by the algorithm. WordNode instances will then only
-        // store WordNode objects adjacent to it that have the shortest
-        // route to beginWord.
+        // Notice that, to get from A to F, AEDF is shorter than ABCDF. This is because AE can get to D
+        // faster than ABC. In this breadth-first search algorithm, nodes that are too slow to reach
+        // intersections will be discarded as they are guaranteed to not be one of the shortest paths.
+        // However, ABCF is also as fast as AEDF, because C and D intersect F at exactly the same node
+        // distance, which is acknowledged by the algorithm. WordNode instances will then only store
+        // WordNode objects adjacent to it that have the shortest route to beginWord.
         bool reachedEnd = false;
         while (!reachedEnd && queue.Count is int levelLength and > 0)
         {
-            // Create WordNode instances and store a HashSet of all
-            // the words visited at this level.
+            // Create WordNode instances and store a HashSet of all the words visited at this level.
             HashSet<string> words = [];
             for (int i = 0; i < levelLength; i++)
             {
@@ -178,9 +169,8 @@ public partial class Solution
                 {
                     if (nodes.ContainsKey(next))
                     {
-                        // Don't enqueue a word whose WordNode has already been visited,
-                        // because it has all the information it needs to get to the
-                        // beginWord in the shortest path.
+                        // Don't enqueue a word whose WordNode has already been visited, because it has
+                        // all the information it needs to get to the beginWord in the shortest path.
                         continue;
                     }
 
@@ -191,8 +181,7 @@ public partial class Solution
 
         if (!nodes.TryGetValue(endWord, out WordNode? endNode))
         {
-            // There is no WordNode for the endWord, so the algorithm
-            // did not find any existing path.
+            // There is no WordNode for the endWord, so the algorithm did not find any existing path.
             return [];
         }
 
@@ -200,8 +189,7 @@ public partial class Solution
         return sequences;
 
 
-        // Checks if two different strings a and b
-        // differ by exactly one character.
+        // Checks if two different strings a and b differ by exactly one character.
         static bool DiffersByOne(string a, string b)
         {
             bool differs = false;

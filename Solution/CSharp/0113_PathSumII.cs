@@ -6,17 +6,15 @@
 //      Runtime:    2 ms
 //      Memory:     49.85 MB
 //
-// Borrowed from 0112_PathSum, but finds all possible
-// path sums.
+// Borrowed from 0112_PathSum, but finds all possible path sums.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns all paths from the <paramref name="root"/>
-    /// of the binary tree to the leaf <see cref="TreeNode"/>
-    /// whose sum is equal to the <paramref name="targetSum"/>.
+    /// Returns all paths from the <paramref name="root"/> of the binary tree to the leaf
+    /// <see cref="TreeNode"/> whose sum is equal to the <paramref name="targetSum"/>.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <param name="targetSum">The target sum.</param>
@@ -57,8 +55,7 @@ public partial class Solution
             TraverseForPaths(node.left, difference);
             TraverseForPaths(node.right, difference);
 
-            // Remove node element after traversal of
-            // its subtrees.
+            // Remove node element after traversal of its subtrees.
             currentPath.RemoveAt(currentPath.Count - 1);
         }
     }

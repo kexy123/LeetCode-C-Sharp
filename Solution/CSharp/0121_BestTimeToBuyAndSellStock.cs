@@ -11,10 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Computes the maximum profit that can be achieved
-    /// by buying then selling stock between two different
-    /// days from the <paramref name="prices"/> <see langword="int"/>
-    /// array.
+    /// Computes the maximum profit that can be achieved by buying then selling stock between two
+    /// different days from the <paramref name="prices"/> <see langword="int"/> array.
     /// </summary>
     /// <param name="prices">The <see langword="int"/> array that is the stock's value at those days.</param>
     /// <returns>The maximum profit that can be achieved.</returns>
@@ -32,10 +30,8 @@ public partial class Solution
             }
             else
             {
-                // Check if the profit on this day
-                // if we bought from the lowest sell
-                // value before it is more than the
-                // maximum profit.
+                // Check if the profit on this day if we bought from the lowest sell value before it is
+                // more than the maximum profit.
                 maxProfit = Math.Max(prices[i] - lowPoint, maxProfit);
             }
         }

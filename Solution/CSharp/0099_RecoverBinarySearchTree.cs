@@ -6,18 +6,16 @@
 //      Runtime:    0 ms
 //      Memory:     49.74 MB
 //
-// TODO: Do follow-up problem with Morris traversal
-// to make the algorithm run with only O(1) space
-// complexity.
+// TODO: Do follow-up problem with Morris traversal to make the algorithm run with only O(1)
+// space complexity.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Recovers a corrupt binary search tree where
-    /// exactly two <see cref="TreeNode"/> instances
-    /// had their values swapped.
+    /// Recovers a corrupt binary search tree where exactly two <see cref="TreeNode"/> instances had
+    /// their values swapped.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     public void RecoverTree(TreeNode root)
@@ -32,12 +30,9 @@ public partial class Solution
         (first!.val, second!.val) = (second.val, first.val);
 
 
-        // Traverses the binary tree inorder. When
-        // traversing the tree inorder on a binary
-        // search tree, the elements it passes through
-        // must always be in ascending order, with
-        // every element being greater than the
-        // previous.
+        // Traverses the binary tree inorder. When traversing the tree inorder on a binary search tree,
+        // the elements it passes through must always be in ascending order, with every element being
+        // greater than the previous.
         void InorderTraverse(TreeNode node)
         {
             if (node.left is not null)
@@ -52,23 +47,16 @@ public partial class Solution
             }
             else
             {
-                // There are only two cases where the
-                // binary search tree may be unordered
-                // thanks to a discussion post that
-                // pointed it out:
+                // There are only two cases where the binary search tree may be unordered thanks to a
+                // discussion post that pointed it out:
                 //
-                // Traverse the tree inorder and consider
-                // it as the element array. If only one
-                // pair is in descending order, swap
-                // those elements around. If two pairs
-                // are in descending order (including
-                // overlapping pairs), swap the first
-                // element of the first pair with the
-                // second element of the second pair.
+                // Traverse the tree inorder and consider it as the element array. If only one pair is
+                // in descending order, swap those elements around. If two pairs are in descending
+                // order (including overlapping pairs), swap the first element of the first pair with
+                // the second element of the second pair.
                 //
-                // This means that the first ListNode
-                // only has to be assigned once, while
-                // the second is dynamic.
+                // This means that the first ListNode only has to be assigned once, while the second
+                // is dynamic.
                 first ??= min;
                 second = node;
             }

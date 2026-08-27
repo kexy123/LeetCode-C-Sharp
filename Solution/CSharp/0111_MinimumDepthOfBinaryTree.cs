@@ -6,17 +6,15 @@
 //      Runtime:    3 ms
 //      Memory:     85.75 MB
 //
-// Directly copied from 0104_MaximumDepthOfBinaryTree, but
-// moved where the minDepth variable changes and prune
-// unnecessary traversals.
+// Directly copied from 0104_MaximumDepthOfBinaryTree, but moved where the minDepth variable changes
+// and prune unnecessary traversals.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Finds the shortest level in the binary tree
-    /// that contains a leaf <see cref="TreeNode"/>.
+    /// Finds the shortest level in the binary tree that contains a leaf <see cref="TreeNode"/>.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <returns>The shortest level in the binary tree that contains a leaf <see cref="TreeNode"/>.</returns>
@@ -39,17 +37,15 @@ public partial class Solution
         {
             if (node is null || depth >= minDepth)
             {
-                // We only need to traverse in levels
-                // lower than the minimum depth.
+                // We only need to traverse in levels lower than the minimum depth.
                 return;
             }
 
             depth++;
             if (node.left is null && node.right is null)
             {
-                // There are no subtrees at this level,
-                // so update the minimum depth as its
-                // parent is a leaf node.
+                // There are no subtrees at this level, so update the minimum depth as its parent is a
+                // leaf node.
                 minDepth = Math.Min(minDepth, depth);
             }
             else

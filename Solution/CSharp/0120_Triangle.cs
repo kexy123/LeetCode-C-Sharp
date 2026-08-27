@@ -11,8 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Computes the sum of the shortest path from the
-    /// top to the bottom of the <paramref name="triangle"/>.
+    /// Computes the sum of the shortest path from the top to the bottom of
+    /// the <paramref name="triangle"/>.
     /// </summary>
     /// <param name="triangle">A triangular <see langword="int"/> array.</param>
     /// <returns>The sum of the shortest path to get from the top to the bottom.</returns>
@@ -26,9 +26,7 @@ public partial class Solution
 
             for (int j = 0; j < row.Count; j++)
             {
-                // Sum by the minimum of the
-                // sum of the left and the
-                // sum of the right.
+                // Sum by the minimum of the sum of the left and the sum of the right.
                 row[j] += Math.Min(rowUnder[j], rowUnder[j + 1]);
             }
         }

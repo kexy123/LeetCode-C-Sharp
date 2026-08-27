@@ -26,10 +26,8 @@ public partial class Solution
 
         for (int i = 2; i <= rowIndex; i++)
         {
-            // Keep track of the previous element
-            // before it got its sum to compute
-            // Pascal's triangle. Note that
-            // row[0] = 1.
+            // Keep track of the previous element before it got its sum to compute Pascal's triangle.
+            // Note that row[0] = 1.
             int previous = 1;
             for (int j = 1; j < i; j++)
             {

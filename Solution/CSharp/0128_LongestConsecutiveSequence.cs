@@ -18,8 +18,8 @@ public partial class Solution
     /// <returns>The length of the longest sequence of consecutive numbers.</returns>
     public int LongestConsecutive(int[] nums)
     {
-        // Convert the nums array into a HashSet. This is an O(n) operation.
-        // Note that HashSet<int>.Contains(int) is an O(1) operation.
+        // Convert the nums array into a HashSet. This is an O(n) operation. Note that
+        // HashSet<int>.Contains(int) is an O(1) operation.
         HashSet<int> existed = [.. nums];
 
         // Loop through every number in the HashSet once. This is at worst O(1).
@@ -28,13 +28,13 @@ public partial class Solution
         {
             if (existed.Contains(num - 1))
             {
-                // We ignore numbers that are not the start of a sequence as
-                // they have or could be visited in other numbers.
+                // We ignore numbers that are not the start of a sequence as they have or could be
+                // visited in other numbers.
                 continue;
             }
 
-            // Find the end of the consecutive sequence, and check if it is higher than
-            // the longest consecutive sequence that was found.
+            // Find the end of the consecutive sequence, and check if it is higher than the longest
+            // consecutive sequence that was found.
             int current = num + 1, streak = 1;
             while (existed.Contains(current))
             {

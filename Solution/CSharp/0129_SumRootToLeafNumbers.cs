@@ -11,9 +11,9 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Sums all possible root-to-leaf numbers in the tree of digits starting at
-    /// the <paramref name="root"/>. A root-to-leaf number contains all the digits
-    /// from the <paramref name="root"/> to a leaf node.
+    /// Sums all possible root-to-leaf numbers in the tree of digits starting at the
+    /// <paramref name="root"/>. A root-to-leaf number contains all the digits from the
+    /// <paramref name="root"/> to a leaf node.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
     /// <returns>The sum of all root-to-leaf numbers.</returns>
@@ -26,8 +26,8 @@ public partial class Solution
         return total;
 
 
-        // Traverses via depth-first search and modifies the currentSum. If the
-        // subroutine reaches a leaf node, it adds it to the total.
+        // Traverses via depth-first search and modifies the currentSum. If the subroutine reaches a
+        // leaf node, it adds it to the total.
         void Traverse(TreeNode node, int currentSum)
         {
             if (node.left is null && node.right is null)

@@ -6,18 +6,16 @@
 //      Runtime:    87 ms
 //      Memory:     45.66 MB
 //
-// Directly borrowed from 0116_PopulatingNextRightPointersInEachNode,
-// just adding both null checks for the left and right of the Node.
+// Directly borrowed from 0116_PopulatingNextRightPointersInEachNode, just adding both null checks for
+// the left and right of the Node.
 
 namespace Solution.CSharp.PopulatingNextRightPointersInEachNodeII_0117;
 
 public partial class Solution
 {
     /// <summary>
-    /// Connects the <see cref="Node.next"/> of all
-    /// <see cref="Node"/> in a binary tree to the
-    /// <see cref="Node"/> right next to it, otherwise
-    /// <see langword="null"/> if not possible.
+    /// Connects the <see cref="Node.next"/> of all <see cref="Node"/> in a binary tree to the
+    /// <see cref="Node"/> right next to it, otherwise <see langword="null"/> if not possible.
     /// </summary>
     /// <param name="root">The starting <see cref="Node"/>.</param>
     /// <returns>The <paramref name="root"/>.</returns>
@@ -42,8 +40,7 @@ public partial class Solution
                     node.next = level.Peek();
                 }
 
-                // The binary tree isn't balanced unlike
-                // 0116_PopulatingNextRightPointersInEachNode.
+                // The binary tree isn't balanced unlike 0116_PopulatingNextRightPointersInEachNode.
                 if (node.left is not null)
                 {
                     level.Enqueue(node.left);

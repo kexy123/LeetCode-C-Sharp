@@ -11,8 +11,7 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Checks if the given binary tree is height-balanced,
-    /// where the depth of the subtrees in every
+    /// Checks if the given binary tree is height-balanced, where the depth of the subtrees in every
     /// <see cref="TreeNode"/> differ by at most one.
     /// </summary>
     /// <param name="root">The starting <see cref="TreeNode"/>.</param>
@@ -23,11 +22,9 @@ public partial class Solution
         return CheckAndGetDepth(root, 0) >= 0;
 
 
-        // A recursive function that returns -1 if the
-        // difference in depth of the two subtrees of
-        // the node is greater than one or one of the
-        // subtrees themselves returned -1; otherwise
-        // returns the depth of the deeper subtree. 
+        // A recursive function that returns -1 if the difference in depth of the two subtrees of the
+        // node is greater than one or one of the subtrees themselves returned -1; otherwise returns
+        // the depth of the deeper subtree. 
         static int CheckAndGetDepth(TreeNode? node, int depth)
         {
             if (node is null)
