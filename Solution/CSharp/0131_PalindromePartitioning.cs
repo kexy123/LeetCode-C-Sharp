@@ -6,10 +6,9 @@
 //      Runtime:    45 ms
 //      Memory:     84.41 MB
 //
-// Originally thought of how to check if a string is a palindrome without the endpoint,
-// until I realized that the complexity for doing such a method is roughly equivalent to
-// just checking if its a palindrome from the end of the string, so there wasn't a purpose
-// to use Manacher's algorithm:
+// Originally thought of how to check if a string is a palindrome without the endpoint, until I
+// realized that the complexity for doing such a method is roughly equivalent to just checking if its a
+// palindrome from the end of the string, so there wasn't a purpose to use Manacher's algorithm:
 // https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm
 
 namespace Solution.CSharp;
@@ -33,9 +32,8 @@ public partial class Solution
         return result;
 
 
-        // A depth-first search subroutine that partitions at every valid palindrome of s
-        // starting at the given index, and calls itself with the index being the end of
-        // the partitioned substring.
+        // A depth-first search subroutine that partitions at every valid palindrome of s starting at
+        // the given index, and calls itself with the index being the end of the partitioned substring.
         void Split(int index)
         {
             if (index >= s.Length)

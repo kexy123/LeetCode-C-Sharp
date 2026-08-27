@@ -11,8 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Returns the minimum number of cuts to partition <paramref name="s"/> such that each
-    /// partition is a palindrome.
+    /// Returns the minimum number of cuts to partition <paramref name="s"/> such that each partition
+    /// is a palindrome.
     /// </summary>
     /// <param name="s">The <see langword="string"/> to partition.</param>
     /// <returns>The minimum number of cuts to partition <paramref name="s"/>.</returns>
@@ -23,9 +23,8 @@ public partial class Solution
         return Split(0) - 1;
 
 
-        // A depth-first search subroutine that partitions at every valid palindrome of s
-        // starting at the given index, and checks if it yields the minimum number of cuts
-        // at that point as well.
+        // A depth-first search subroutine that partitions at every valid palindrome of s starting at
+        // the given index, and checks if it yields the minimum number of cuts at that point as well.
         int Split(int index)
         {
             if (index >= s.Length)

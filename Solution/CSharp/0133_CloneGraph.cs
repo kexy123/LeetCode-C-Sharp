@@ -44,8 +44,7 @@ public partial class Solution
 
         foreach (KeyValuePair<Node, Node> entry in clonedNodes)
         {
-            // Connect the neighbors of the clone to other clones
-            // that correspond to the original.
+            // Connect the neighbors of the clone to other clones that correspond to the original.
             foreach (Node neighbor in entry.Key.neighbors)
             {
                 entry.Value.neighbors.Add(clonedNodes[neighbor]);
