@@ -6,18 +6,16 @@
 //      Runtime:    0 ms
 //      Memory:     43.53 MB
 //
-// Similar to 0082_RemoveDuplicatesFromSortedList, but
-// a lot more simplified because there is no requirement
-// to remove all duplicates.
+// Similar to 0082_RemoveDuplicatesFromSortedList, but a lot more simplified because there is no
+// requirement to remove all duplicates.
 
 namespace Solution.CSharp.RemoveDuplicatesFromSortedList_0083;
 
 public partial class Solution
 {
     /// <summary>
-    /// Removes all other duplicates from the
-    /// sorted linked <see cref="ListNode"/>
-    /// starting at <paramref name="head"/>.
+    /// Removes all other duplicates from the sorted linked <see cref="ListNode"/> starting
+    /// at <paramref name="head"/>.
     /// </summary>
     /// <param name="head">The starting <see cref="ListNode"/>.</param>
     /// <returns>The new distinct sorted linked <see cref="ListNode"/>.</returns>
@@ -34,12 +32,8 @@ public partial class Solution
         {
             if (old.val == root.val)
             {
-                // B is essentially ignored
-                // because A's pointer is
-                // skipping over B now.
-                // However, we keep old at
-                // B to check for any more
-                // duplicates.
+                // B is essentially ignored because A's pointer is skipping over B now. However, we
+                // keep old at B to check for any more duplicates.
                 //
                 //   ------>
                 //  /       \

@@ -6,17 +6,15 @@
 //      Runtime:    12 ms
 //      Memory:     53.56 MB
 //
-// This problem directly inherits from 0084_LargestRectangleInHistogram.
-// However, I didn't come to that relation so I looked at some
-// discussion posts.
+// This problem directly inherits from 0084_LargestRectangleInHistogram. However, I didn't come to that
+// relation so I looked at some discussion posts.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Finds the area of the largest rectangle in the
-    /// <see langword="char"/> <paramref name="matrix"/>
+    /// Finds the area of the largest rectangle in the <see langword="char"/> <paramref name="matrix"/>
     /// of zeroes and ones that only consists of ones.
     /// </summary>
     /// <param name="matrix">The <see langword="char"/> matrix of zeroes and ones.</param>
@@ -25,9 +23,7 @@ public partial class Solution
     {
         int maxArea = 0;
 
-        // Essentially convert the matrix into a
-        // histogram and compute the largest
-        // rectangle in it.
+        // Essentially convert the matrix into a histogram and compute the largest rectangle in it.
         int[] histogram = new int[matrix[0].Length];
         Stack<(int index, int height)> areas = new(histogram.Length);
         foreach (char[] row in matrix)

@@ -11,28 +11,22 @@ namespace Solution.CSharp;
 public partial class Solution
 {
     /// <summary>
-    /// Partitions the given linked <see cref="ListNode"/>
-    /// where the elements less than <paramref name="x"/>
-    /// are on the left and the elements greater than or
-    /// equal to <paramref name="x"/> are on the right,
-    /// while keeping their relative order.
+    /// Partitions the given linked <see cref="ListNode"/> where the elements less than
+    /// <paramref name="x"/> are on the left and the elements greater than or equal to
+    /// <paramref name="x"/> are on the right, while keeping their relative order.
     /// </summary>
     /// <param name="head">The start of the linked <see cref="ListNode"/>.</param>
     /// <param name="x">The given <see langword="int"/> for partitioning.</param>
     /// <returns>The starting <see cref="ListNode"/>.</returns>
     public ListNode? Partition(ListNode? head, int x)
     {
-        // The linked ListNode will only be in
-        // two segments: the segment where all
-        // values are less than x, and the other
-        // segment where all values are greater
-        // than or equal to x. These are the
+        // The linked ListNode will only be in two segments: the segment where all values are less than
+        // x, and the other segment where all values are greater than or equal to x. These are the
         // start and end segments respectively.
         ListNode start = new();
         ListNode end = new();
 
-        // We keep track of the pointers for
-        // those segments.
+        // We keep track of the pointers for those segments.
         ListNode startRoot = start;
         ListNode endRoot = end;
 

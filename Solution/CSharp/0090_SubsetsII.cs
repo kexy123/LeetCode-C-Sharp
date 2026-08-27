@@ -6,21 +6,18 @@
 //      Runtime:    3 ms
 //      Memory:     47.43 MB
 //
-// Directly borrowed from 0078_Subsets, but adds a check
-// to determine if a branch should be pushed or not.
-// TODO: Additionally, DFS is better in this scenario
-// compared to BFS, so rewrite to DFS when appropriate.
-// The same applies to 0078_Subsets.
+// Directly borrowed from 0078_Subsets, but adds a check to determine if a branch should be pushed
+// or not.
+// TODO: Additionally, DFS is better in this scenario compared to BFS, so rewrite to DFS when
+// appropriate. The same applies to 0078_Subsets.
 
 namespace Solution.CSharp;
 
 public partial class Solution
 {
     /// <summary>
-    /// Returns an <see cref="IList{T}"/> of all unique
-    /// subsets in the <paramref name="nums"/> 
-    /// <see langword="int"/> array that might contain
-    /// duplicates, given that the duplicate items do
+    /// Returns an <see cref="IList{T}"/> of all unique subsets in the <paramref name="nums"/> 
+    /// <see langword="int"/> array that might contain duplicates, given that the duplicate items do
     /// not discount each other in the subsets.
     /// </summary>
     /// <param name="nums">The <see langword="int"/> array.</param>
@@ -49,9 +46,8 @@ public partial class Solution
             {
                 if (i > result.numsIndex + 1 && nums[i] == nums[i - 1])
                 {
-                    // Do not push to backtrackStack since
-                    // the same number will have already
-                    // formed the subsets.
+                    // Do not push to backtrackStack since the same number will have already formed
+                    // the subsets.
                     continue;
                 }
 
