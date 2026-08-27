@@ -3,8 +3,8 @@
 namespace Solution.LeetCodeImplementations;
 
 /// <summary>
-/// Simplified definition of <see cref="ListNode"/> in 0002_AddTwoNumbers and other problems: stores a
-/// base-10 digit and a pointer to another <see cref="ListNode"/>.
+/// Simplified definition of <see cref="ListNode"/> in 0002_AddTwoNumbers and other problems: stores an
+/// <see langword="int"/> value and a pointer to another <see cref="ListNode"/>.
 /// </summary>
 [DebuggerDisplay("{ToString(),nq}")]
 public class ListNode
