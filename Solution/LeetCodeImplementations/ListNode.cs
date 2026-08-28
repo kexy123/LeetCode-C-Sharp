@@ -4,13 +4,13 @@ namespace Solution.LeetCodeImplementations;
 
 /// <summary>
 /// Simplified definition of <see cref="ListNode"/> in 0002_AddTwoNumbers and other problems: stores an
-/// <see langword="int"/> value and a pointer to another <see cref="ListNode"/>.
+/// <see langword="int"/> value and a single pointer to another <see cref="ListNode"/>.
 /// </summary>
 [DebuggerDisplay("{ToString(),nq}")]
 public class ListNode
 {
     /// <summary>
-    /// The <see langword="int"/> value of <see cref="this"/>.
+    /// The <see langword="int"/> value.
     /// </summary>
     public int val;
 
@@ -54,8 +54,8 @@ public class ListNode
 
 
     /// <summary>
-    /// Determines if <see cref="this"/> is part of a cyclic linked <see cref="ListNode"/>. If it is,
-    /// find the starting point of the cycle.
+    /// Determines if part of a cyclic linked <see cref="ListNode"/>. If so, find the starting point of
+    /// the cycle.
     /// </summary>
     /// <returns>The starting point of the cycle. <see langword="null"/> if not in a cycle.</returns>
     private ListNode? IsInCycle()

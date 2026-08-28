@@ -11,7 +11,7 @@ namespace Solution.LeetCodeImplementations;
 public class TreeNode
 {
     /// <summary>
-    /// The <see langword="int"/> value of <see cref="this"/>.
+    /// The <see langword="int"/> value.
     /// </summary>
     public int val;
 

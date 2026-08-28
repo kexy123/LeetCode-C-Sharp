@@ -4,8 +4,8 @@ namespace Solution.LeetCodeImplementations.CopyListWithRandomPointer_0138;
 
 /// <summary>
 /// Simplified definition of <see cref="Node"/> in 0138_CopyListWithRandomPointer: stores an
-/// <see langword="int"/> value, the pointer to the next <see cref="Node"/>, and a random pointer to
-/// a <see cref="Node"/> in the linked list.
+/// <see langword="int"/> value, a single pointer to the next <see cref="Node"/>, and a random pointer
+/// to a <see cref="Node"/> in the linked list.
 /// </summary>
 [DebuggerDisplay("{ToString(),nq}")]
 public class Node : ListNode
@@ -71,8 +71,8 @@ public class Node : ListNode
 
 
     /// <summary>
-    /// Determines if <see cref="this"/> is part of a cyclic linked <see cref="Node"/>. If it is,
-    /// find the starting point of the cycle.
+    /// Determines if part of a cyclic linked <see cref="Node"/>. If so, find the starting point of
+    /// the cycle.
     /// </summary>
     /// <returns>The starting point of the cycle. <see langword="null"/> if not in a cycle.</returns>
     private Node? IsInCycle()
