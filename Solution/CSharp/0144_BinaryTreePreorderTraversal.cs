@@ -40,7 +40,6 @@ public partial class Solution
 
             if (node.right is TreeNode right)
             {
-                // Push the right node.
                 stack.Push(right);
             }
 

@@ -11,8 +11,8 @@ namespace Solution.CSharp;
 public partial class Solution;
 
 /// <summary>
-/// A cache class with a given <see cref="Capacity"/> that evicts the least-recently used (LRU)
-/// cache entries in terms of access and assignment.
+/// A cache class with a given <see cref="Capacity"/> that evicts the least-recently used (LRU) cache
+/// entries in terms of access and assignment.
 /// </summary>
 public class LRUCache
 {
@@ -81,8 +81,8 @@ public class LRUCache
 
     /// <summary>
     /// Adds or reassigns a given <paramref name="key"/> to a <paramref name="value"/>, and evicts the
-    /// least-recently used cache entry if this <see cref="LRUCache"/> instance exceeds
-    /// the <see cref="Capacity"/> in O(1) average time complexity.
+    /// least-recently used cache entry if this <see cref="LRUCache"/> instance exceeds the
+    /// <see cref="Capacity"/> in O(1) average time complexity.
     /// </summary>
     /// <param name="key">The <see langword="int"/> key to assign or add.</param>
     /// <param name="value">The <see langword="int"/> value to assign to.</param>
