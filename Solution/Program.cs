@@ -11,8 +11,8 @@ internal class Program
 
         Solution p = new();
 
-        // Invoke the method with a fast test case to prevent JIT compilation work
-        // being timed by the Stopwatch.
+        // Invoke the method with a fast test case to prevent JIT compilation work being timed by
+        // the Stopwatch.
 
         Stopwatch stopwatch = Stopwatch.StartNew();
         stopwatch.Start();
